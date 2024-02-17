@@ -9,8 +9,9 @@ class MostExpensiveSpider(scrapy.Spider):
     start_urls = ["https://www.immoweb.be/en/search/house/for-sale?countries=BE&page=1&orderBy=most_expensive"]
     
     def start_requests(self):
-        for url in self.start_urls:
-            yield scrapy.Request(url=url, callback=self.parse)
+        base_url = "https://www.immoweb.be/en/search/house/for-sale?countries=BE&page={}&orderBy=most_expensive"
+        for i in range(1, 10):  # Change 101 to the number of pages you want to scrape + 1
+            yield scrapy.Request(url=base_url.format(i), callback=self.parse)
     
     def parse(self, response):
         for h2 in response.css('h2'):

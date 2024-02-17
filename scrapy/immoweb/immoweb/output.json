@@ -1,32 +1,1082 @@
 [
-{"href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/bruxelles/1000/11077810", "title": "Mixed-use building"},
-{"href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/mons/7000/11066875", "title": "Apartment block"},
-{"href": "https://www.immoweb.be/en/classified/house/for-sale/havre/7021/8703998", "title": "House"},
-{"href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/havre/7021/11059876", "title": "Apartment block"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10866414", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11132028", "title": "House"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11134865", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/11137704", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/11133487", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/gerpinnes/6280/10625164", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/house/for-sale/evergem/9940/11027949", "title": "House"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11023593", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11033132", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/charleroi/6010/11013620", "title": "Apartment block"},
-{"href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/leuven/3000/10626889", "title": "Apartment block"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/lasne/1380/10728057", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11130710", "title": "House"},
-{"href": "https://www.immoweb.be/en/classified/house/for-sale/uccle/1180/10788682", "title": "House"},
-{"href": "https://www.immoweb.be/en/classified/manor-house/for-sale/kruisem/9770/11143668", "title": "Manor house"},
-{"href": "https://www.immoweb.be/en/classified/mansion/for-sale/bruxelles/1050/11072887", "title": "Mansion"},
-{"href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/bruxelles/1000/10452091", "title": "Apartment block"},
-{"href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/liege/4000/11066133", "title": "Exceptional property"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10974852", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11032475", "title": "House"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10753775", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/grez-doiceau/1390/10443763", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/house/for-sale/grez-doiceau/1390/10445148", "title": "House"},
-{"href": "https://www.immoweb.be/en/classified/villa/for-sale/grez-doiceau/1390/10447218", "title": "Villa"},
-{"href": "https://www.immoweb.be/en/classified/house/for-sale/grez-doiceau/1390/10833563", "title": "House"}
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/bruxelles/1000/11077810",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/mons/7000/11066875",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/havre/7021/8703998",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/havre/7021/11059876",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10866414",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11132028",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11134865",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/11137704",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/11133487",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/gerpinnes/6280/10625164",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/evergem/9940/11027949",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11023593",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11033132",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/charleroi/6010/11013620",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/leuven/3000/10626889",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/lasne/1380/10728057",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11130710",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/uccle/1180/10788682",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/manor-house/for-sale/kruisem/9770/11143668",
+    "title": "Manor house"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/bruxelles/1050/11072887",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/bruxelles/1000/10452091",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/liege/4000/11066133",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10974852",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11032475",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10753775",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/grez-doiceau/1390/10443763",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/grez-doiceau/1390/10445148",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/grez-doiceau/1390/10447218",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/grez-doiceau/1390/10833563",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/namur/5000/10148586",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10957657",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/het-zoute/8300/10950535",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10952595",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/wilrijk/2610/11138699",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10927418",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10923336",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/10946711",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/knokke-heist/8300/10923193",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10945165",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/10960014",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/10810278",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10812426",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/saint-gilles/1060/10819486",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/etterbeek/1040/10556343",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/oud-turnhout/2360/10736050",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/10812080",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10917416",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10697875",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/bruxelles/1000/11064959",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/bruxelles/1000/10965775",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/anderlecht/1070/10547989",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/antwerp/2000/10894205",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/ixelles/1050/11066247",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/mont-saint-guibert/1435/10651693",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/ottignies-louvain-la-neuve/1348/11094262",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/ottignies-louvain-la-neuve/1340/10641697",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/ixelles/1050/10864009",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/sint-niklaas-belsele/9111/10209503",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/braine-lalleud/1421/10940911",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/neufchateau/6840/10576329",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/bruxelles/1000/11103500",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/schoten/2900/10629955",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10926921",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10796980",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/knesselare/9910/10661999",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/braine-lalleud/1420/11077886",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/antwerp/2000/10638831",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/antwerp/2000/10834785",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/brussels/1000/11077832",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/10960146",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/10701430",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10960588",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/antwerpen-2050/2050/10831070",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/uccle/1180/10768994",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/elsene/1050/10732498",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/anderlecht/1070/11143907",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10917413",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/rhisnes/5080/10748666",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/ixelles/1050/11146437",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10965187",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11017587",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11018124",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/schilde/2970/11116278",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/10772052",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10657907",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/schilde/2970/11134024",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/schilde/2970/10679409",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/molenbeek-saint-jean/1080/9288291",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11035479",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11033066",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/raeren/4731/10616800",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11045160",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11033836",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/knokke-heist/8300/10931517",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11146580",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10930343",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10930342",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10791148",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/ixelles/1050/11003495",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/ixelles/1050/10875663",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11036828",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10924371",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10850346",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/uccle/1180/10734559",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/bruxelles/1000/10582453",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/ixelles/1050/10582452",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/ans/4430/11077828",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/kapellen/2950/10171801",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11147301",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11037492",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10880020",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11082415",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10892077",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10883000",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-zoute/8300/10887807",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/wilrijk/2610/11049058",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/binche/7134/10872185",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/schilde/2970/9683503",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/ixelles/1050/9789173",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/uccle/1180/11144109",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10917435",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11042179",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/sohier/6920/10674407",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/ixelles/1050/10685897",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/ixelles/1050/10485096",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/brasschaat/2930/10990839",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10926420",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10763837",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/uccle/1180/10551894",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/asse/1730/10897317",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/ixelles/1050/10768993",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/asse/1730/11138877",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/schilde/2970/11136136",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10926920",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/9921629",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/11045051",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/grez-doiceau/1390/11142516",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/bruxelles/1000/10871841",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/kortenaken/3470/10517081",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/uccle/1180/10927363",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/molenbeek-saint-jean/1080/10475411",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/bruxelles/1080/10454309",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/ixelles/1050/10861766",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/manor-house/for-sale/kalmthout/2920/10959588",
+    "title": "Manor house"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/ohey/5350/9529989",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/lokeren/9160/10441365",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/sart-lez-spa/4845/10919095",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/spa/4900/10998241",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11119429",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/knokke-heist/8300/10887262",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/brasschaat/2930/10709458",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/het-zoute/8300/10502214",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10887917",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/10506242",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10887802",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/het-zoute/8300/10909144",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10742040",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/10852840",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/10753607",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10743201",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/saint-gilles/1060/10630603",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/ixelles/1050/10523353",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/st-gilles/1060/10529467",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/ixelles/1050/10953495",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/saint-gilles/1060/11016328",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/ixelles/1050/11005999",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11041183",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/bruxelles/1000/11037414",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/ixelles/1050/11037413",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11040411",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11130014",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/11040395",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/oud-turnhout/2360/10842325",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/oud-turnhout/2360/10857953",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10930029",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/kapellen/2950/7710166",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-zoute/8300/10984373",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10949718",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-zoute/8300/10977776",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/10830910",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10825773",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10844212",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11024198",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-zoute/8300/10375585",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke/8300/10288476",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-zoute/8300/11061020",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/forest/1190/10971295",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mansion/for-sale/ixelles/1050/10937231",
+    "title": "Mansion"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/uccle/1180/10817800",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10675426",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10894012",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/kapellen/2950/10742539",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/forest/1190/10537036",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/bruxelles/1190/10940528",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/vorst/1190/9947478",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/bruxelles/1190/9294472",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/forest/1190/10372029",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/ixelles/1050/10938665",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/uccle/1180/9854478",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/uccle/1180/10372189",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/manor-house/for-sale/brussels-city/1000/11129427",
+    "title": "Manor house"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/sint-agatha-berchem/1082/11129426",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/het-zoute/8300/11073598",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/ronse/9600/11090004",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/uccle/1180/10032668",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/sint-agatha-berchem/1082/11129428",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/knokke-heist/8300/10500762",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/10860296",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/11028864",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10500730",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/uccle/1180/10511906",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/uccle/1180/11112420",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/ixelles/1050/11127802",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/brussels-city/1000/10583561",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11041187",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11147304",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11148904",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-zoute/8300/11054505",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/11084571",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/leuven/3000/11038226",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/zoersel/2980/9947499",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/zoersel/2980/9838734",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/zoersel/2980/9397963",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/zoersel/2980/10099854",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/zoersel/2980/10219234",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/zoersel/2980/10234632",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/zoersel/2980/10216128",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/castle/for-sale/zoersel/2980/10309075",
+    "title": "Castle"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/wilrijk/2610/10954599",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10823485",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10890649",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/manor-house/for-sale/knokke-heist/8300/10751308",
+    "title": "Manor house"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/westerlo/2260/10904938",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/het-zoute/8300/10411908",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/st-gilles/1060/10679997",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/uccle/1180/10821082",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11132031",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11132287",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/schoten/2900/10718570",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/manor-house/for-sale/gerpinnes/6280/10816333",
+    "title": "Manor house"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/schilde/2970/10846574",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/molenbeek-saint-jean/1080/11127758",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11067975",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11029224",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10716057",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/11071653",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10512786",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10300413",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10776510",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10767400",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10773164",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/11050263",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/10802292",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10444731",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/woluwe-saint-pierre/1150/11144272",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/mixed-use-building/for-sale/bruxelles/1000/11076169",
+    "title": "Mixed-use building"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist/8300/10659923",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/apartment-block/for-sale/turnhout/2300/11114161",
+    "title": "Apartment block"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-heist-knokke/8300/10687543",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/woluwe-saint-pierre/1150/10669774",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/woluwe-saint-pierre/1150/10669671",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/uccle/1180/10582420",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/uccle/1180/9893997",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/knokke-heist/8300/10718228",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/exceptional-property/for-sale/knokke-heist/8301/10564947",
+    "title": "Exceptional property"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10916089",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-zoute/8300/11117251",
+    "title": "House"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/villa/for-sale/knokke-zoute/8300/10452851",
+    "title": "Villa"
+  },
+  {
+    "href": "https://www.immoweb.be/en/classified/house/for-sale/knokke-heist/8300/10369127",
+    "title": "House"
+  }
 ]
