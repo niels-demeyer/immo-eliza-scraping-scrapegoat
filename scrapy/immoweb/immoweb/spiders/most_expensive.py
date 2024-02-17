@@ -1,5 +1,6 @@
 from typing import Iterable
 import scrapy
+import logging
 
 
 class MostExpensiveSpider(scrapy.Spider):
@@ -12,7 +13,16 @@ class MostExpensiveSpider(scrapy.Spider):
             yield scrapy.Request(url=url, callback=self.parse)
     
     def parse(self, response):
-        title = response.css('title::text').get()
-        yield {
-            'title': title,
-        }
+        for h2 in response.css('h2'):
+            link = h2.css('a')
+            if link:
+                href = link.css('::attr(href)').get()
+                title = link.css('::text').get()
+                if title is not None:
+                    title = title.strip()
+                yield {
+                    'href': href,
+                    'title': title,
+                }
+            else:
+                logging.info(f"No 'a' tag found in this 'h2' element")
