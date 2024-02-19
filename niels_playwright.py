@@ -165,13 +165,13 @@ class WebScraper:
 
 # Usage
 scraper = WebScraper(
-    # "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
-    "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
+    "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
+    # "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
 )
 scraper.scrape()
-# print(scraper.street_name)
-# print(scraper.postal_code)
-# print(scraper.town_name)
-# print(scraper.overview)
-# print(scraper.description)
+print(scraper.street_name)
+print(scraper.postal_code)
+print(scraper.town_name)
+print(scraper.overview)
+print(scraper.description)
 print(scraper.info)
