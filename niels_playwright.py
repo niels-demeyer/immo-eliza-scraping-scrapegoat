@@ -8,10 +8,12 @@ class WebScraper:
         # Initialize the selectors
         self.button_selector = 'button[data-testid="uc-accept-all-button"]'
         self.adress_selector = ".classified__information--address-row"
+        self.overview_selector = ".overview__text"
         # Initialize the result variables
         self.street_name = []
         self.postal_code = []
         self.town_name = []
+        self.overview = []
 
     def click_button(self, page):
         page.wait_for_selector(self.button_selector)
@@ -60,6 +62,27 @@ class WebScraper:
                 self.postal_code.append(postal_code)
                 self.town_name.append(town_name)
 
+    def get_overview(self, page):
+        # Get all elements with the class "overview__text"
+        overview_elements = page.query_selector_all(self.overview_selector)
+
+        # Iterate over each overview element
+        for element in overview_elements:
+            # Get the text content of the overview element
+            overview_text = (
+                element.text_content()
+                .strip()  # Remove leading/trailing whitespace
+                .replace("\n", " ")  # Replace newlines with spaces
+                .replace("—", "")  # Remove dashes
+                .strip()  # Remove leading/trailing whitespace again
+            )
+
+            # Remove extra spaces
+            overview_text = " ".join(overview_text.split())
+
+            # Append the cleaned overview text to the overview list
+            self.overview.append(overview_text)
+
     def scrape(self):
         with sync_playwright() as p:
             # Launch a new browser context
@@ -78,6 +101,9 @@ class WebScraper:
             # Use the get_address method
             self.get_address(page)
 
+            # Use the get_overview method
+            self.get_overview(page)
+
             # Close the browser
             browser.close()
 
@@ -88,3 +114,7 @@ scraper = WebScraper(
     "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
 )
 scraper.scrape()
+# print(scraper.street_name)
+# print(scraper.postal_code)
+# print(scraper.town_name)
+print(scraper.overview)
