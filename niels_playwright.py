@@ -9,11 +9,13 @@ class WebScraper:
         self.button_selector = 'button[data-testid="uc-accept-all-button"]'
         self.adress_selector = ".classified__information--address-row"
         self.overview_selector = ".overview__text"
+        self.description_selector = ".classified__description"
         # Initialize the result variables
         self.street_name = []
         self.postal_code = []
         self.town_name = []
         self.overview = []
+        self.description = []
 
     def click_button(self, page):
         page.wait_for_selector(self.button_selector)
@@ -83,6 +85,25 @@ class WebScraper:
             # Append the cleaned overview text to the overview list
             self.overview.append(overview_text)
 
+    def get_description(self, page):
+        # Get the description element
+        description_element = page.query_selector(self.description_selector)
+
+        # Get the text content of the description element
+        description_text = (
+            description_element.text_content()
+            .strip()  # Remove leading/trailing whitespace
+            .replace("\n", " ")  # Replace newlines with spaces
+            .replace("—", "")  # Remove dashes
+            .strip()  # Remove leading/trailing whitespace again
+        )
+
+        # Remove extra spaces
+        description_text = " ".join(description_text.split())
+
+        # Append the cleaned description text to the description list
+        self.description.append(description_text)
+
     def scrape(self):
         with sync_playwright() as p:
             # Launch a new browser context
@@ -104,6 +125,9 @@ class WebScraper:
             # Use the get_overview method
             self.get_overview(page)
 
+            # Use the get_description method
+            self.get_description(page)
+
             # Close the browser
             browser.close()
 
@@ -117,4 +141,5 @@ scraper.scrape()
 # print(scraper.street_name)
 # print(scraper.postal_code)
 # print(scraper.town_name)
-print(scraper.overview)
+# print(scraper.overview)
+print(scraper.description)
