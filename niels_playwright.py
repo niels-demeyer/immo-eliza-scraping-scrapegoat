@@ -16,6 +16,7 @@ class WebScraper:
         self.town_name = []
         self.overview = []
         self.description = []
+        self.info = {}
 
     def click_button(self, page):
         page.wait_for_selector(self.button_selector)
@@ -104,6 +105,33 @@ class WebScraper:
         # Append the cleaned description text to the description list
         self.description.append(description_text)
 
+    def get_info(self, page):
+        # Get all elements with the class "classified-table__body"
+        table_elements = page.query_selector_all(".classified-table__body")
+
+        # Iterate over each table element
+        for table in table_elements:
+            # Get all rows in the table
+            rows = table.query_selector_all(".classified-table__row")
+
+            # Iterate over each row
+            for row in rows:
+                # Get the key cell in the row
+                key_cell = row.query_selector("th.classified-table__header")
+                # Get the value cell in the row
+                value_cell = row.query_selector("td.classified-table__data")
+
+                # If both cells exist
+                if key_cell and value_cell:
+                    # Get the text content of the key cell
+                    key = key_cell.inner_text().strip()
+
+                    # Get the text content of the value cell
+                    value = value_cell.inner_text().strip()
+
+                    # Store the key-value pair in the info dictionary
+                    self.info[key] = value
+
     def scrape(self):
         with sync_playwright() as p:
             # Launch a new browser context
@@ -128,6 +156,9 @@ class WebScraper:
             # Use the get_description method
             self.get_description(page)
 
+            # Use the get_info method
+            self.get_info(page)
+
             # Close the browser
             browser.close()
 
@@ -142,4 +173,5 @@ scraper.scrape()
 # print(scraper.postal_code)
 # print(scraper.town_name)
 # print(scraper.overview)
-print(scraper.description)
+# print(scraper.description)
+print(scraper.info)
