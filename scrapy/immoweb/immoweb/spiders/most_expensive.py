@@ -5,7 +5,18 @@ import logging
 class MostExpensiveSpider(scrapy.Spider):
     name = "most_expensive"
     allowed_domains = ["www.immoweb.be"]
-    start_urls = ["https://www.immoweb.be/en/search/house/for-sale?countries=BE&page=1&orderBy=most_expensive"]
+    start_urls = ["https://www.immoweb.be/en/search/house/for-sale/east-flanders/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/west-flanders/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/antwerpen/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/limburg/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/vlaams-brabant/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/brussels/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/waals-brabant/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/henegouwen/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/luxembourg/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/namen/province?countries=BE&page=1&orderBy=most_expensive",
+                  "https://www.immoweb.be/en/search/house/for-sale/luik/province?countries=BE&page=1&orderBy=most_expensive"
+                  ]
 
     def parse(self, response):
         found_elements = False
