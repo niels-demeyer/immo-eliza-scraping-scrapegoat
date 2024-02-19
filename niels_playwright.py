@@ -78,11 +78,6 @@ class WebScraper:
             # Use the get_address method
             self.get_address(page)
 
-            # # Print the address components
-            print(f"postal_code {self.postal_code}")
-            print(f"town_name {self.town_name}")
-            print(f"street_name {self.street_name}")
-
             # Close the browser
             browser.close()
 
