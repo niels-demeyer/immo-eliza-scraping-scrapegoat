@@ -1,34 +1,95 @@
 from playwright.sync_api import sync_playwright
 
-button_selector = 'button[data-testid="uc-accept-all-button"]'
-adress_selector = '.classified__information--address-row'
 
-with sync_playwright() as p:
-    # Launch a new browser context
-    browser = p.chromium.launch(headless=False)  
-    context = browser.new_context()
+class WebScraper:
+    def __init__(self, url):
+        # Initialize the url that is passed in
+        self.url = url
+        # Initialize the selectors
+        self.button_selector = 'button[data-testid="uc-accept-all-button"]'
+        self.adress_selector = ".classified__information--address-row"
+        # Initialize the result variables
+        self.street_name = []
+        self.postal_code = []
+        self.town_name = []
 
-    # Open a new page
-    page = context.new_page()
+    def click_button(self, page):
+        page.wait_for_selector(self.button_selector)
+        page.click(self.button_selector)
 
-    # Navigate to the page
-    page.goto("https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027")
+    def get_address(self, page):
+        # Get all address elements
+        address_elements = page.query_selector_all(self.adress_selector)
 
-    # Click the button
-    page.wait_for_selector(button_selector)
-    page.click(button_selector)
+        # Iterate over each pair of address elements
+        for i in range(0, len(address_elements), 2):
+            # Get the text content of the first address element
+            first_address = (
+                address_elements[i]
+                .text_content()
+                .strip()
+                .replace("\n", " ")
+                .replace("—", "")
+                .strip()
+            )
 
-    # Wait for the address element to be present and get its text
-    address_element = page.wait_for_selector(adress_selector)
-    address = address_element.text_content().strip()  # Remove leading and trailing whitespaces
-    address = address.replace("\n", " ").replace("—", "").strip()  # Remove newline characters and dashes, then strip again
+            # Get the text content of the second address element
+            second_address = (
+                address_elements[i + 1]
+                .text_content()
+                .strip()
+                .replace("\n", " ")
+                .replace("—", "")
+                .strip()
+            )
 
-    # Split the address into postal_code and town_name
-    postal_code, town_name = address.split()
+            if second_address == "Ask for the exact address":
+                # If the second address is "Ask for the exact address", set the street name to "Ask for the exact address"
+                self.street_name.append(second_address)
 
-    # Print the postal_code and town_name
-    print(postal_code)
-    print(town_name)
+                # The first address is the postal code and town name
+                postal_code, town_name = first_address.split(maxsplit=1)
+                self.postal_code.append(postal_code)
+                self.town_name.append(town_name)
+            else:
+                # If the second address is not "Ask for the exact address", the first address is the street name
+                self.street_name.append(first_address)
 
-    # Close the browser
-    browser.close()
+                # The second address is the postal code and town name
+                postal_code, town_name = second_address.split(maxsplit=1)
+                self.postal_code.append(postal_code)
+                self.town_name.append(town_name)
+
+    def scrape(self):
+        with sync_playwright() as p:
+            # Launch a new browser context
+            browser = p.chromium.launch(headless=False)
+            context = browser.new_context()
+
+            # Open a new page
+            page = context.new_page()
+
+            # Navigate to the page
+            page.goto(self.url)
+
+            # Use the click_button method
+            self.click_button(page)
+
+            # Use the get_address method
+            self.get_address(page)
+
+            # # Print the address components
+            print(f"postal_code {self.postal_code}")
+            print(f"town_name {self.town_name}")
+            print(f"street_name {self.street_name}")
+
+            # Close the browser
+            browser.close()
+
+
+# Usage
+scraper = WebScraper(
+    # "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
+    "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
+)
+scraper.scrape()
