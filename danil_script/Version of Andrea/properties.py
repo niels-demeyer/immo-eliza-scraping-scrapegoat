@@ -61,7 +61,7 @@ class Single:
 
     def get_kitchen(self):
         try:
-            if self.data["property"]["kitchen"]["type"] != "NOT_INSTALLED":
+            if self.data["property"]["kitchen"] is not None and self.data["property"]["kitchen"]["type"] != "NOT_INSTALLED":
                 return 1
             else:
                 return 0
@@ -70,7 +70,7 @@ class Single:
 
     def get_fireplace(self):
         try:
-            if self.data["property"]["fireplaceExists"]:
+            if self.data["property"] is not None and self.data["property"]["fireplaceExists"]:
                 return 1
             else:
                 return 0
@@ -79,21 +79,22 @@ class Single:
 
     def get_facades(self):
         try:
-            facade = self.data["property"]["building"]["facadeCount"]
-            if facade != "null" and facade != None:
-                return facade
-            else:
+            if self.data:
+                if self.data is not None and self.data["property"]["building"] is not None:
+                    facade = self.data["property"]["building"]["facadeCount"]
+                    if facade is not None and facade != "null":
+                        return facade
                 return None
         except Exception as e:
             return str(e)
 
     def get_energy_consumption(self):
         try:
-            energy_sm = self.data["transaction"]["certificates"]["primaryEnergyConsumptionPerSqm"]
-            if energy_sm != "null" or energy_sm != None:
-                return energy_sm
-            else:
-                return None
+            if self.data is not None:
+                energy_sm = self.data["transaction"]["certificates"]["primaryEnergyConsumptionPerSqm"]
+                if energy_sm is not None and energy_sm != "null":
+                    return energy_sm
+            return None
         except Exception as e:
             return str(e)
 
@@ -119,27 +120,22 @@ class Single:
 
     def get_state_of_building(self):
         try:
-            state_of_building = self.data['property']['building']['condition']
-            if state_of_building == "GOOD":
-                return "good"
-            elif state_of_building == "JUST_RENOVATED":
-                return "just renovated"
-            elif state_of_building == "AS_NEW":
-                return "as new"
-            elif state_of_building == "TO_BE_DONE_UP":
-                return "to be done up"
-            elif state_of_building == "TO_RENOVATE":
-                return "to renovate"
-            else:
+            if self.data['property'] is not None and self.data['property']['building'] is not None:
+                state_of_building = self.data['property']['building']['condition']
                 return state_of_building
+            else:
+                return None
         except Exception as e:
             return str(e)
 
     def get_construction_year(self):
         try:
-            construction_year = self.data['property']['building']['constructionYear']
-            if construction_year:
-                return construction_year
+            if self.data['property'] is not None and self.data['property']['building'] is not None:
+                construction_year = self.data['property']['building']['constructionYear']
+                if construction_year:
+                    return construction_year
+                else:
+                    return None
             else:
                 return None
         except Exception as e:
