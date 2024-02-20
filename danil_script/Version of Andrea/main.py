@@ -42,6 +42,8 @@ def main(url):
         print(f"Price: {test.get_price()}")
         print(f"Property type: {test.get_property_type()}")
         print(f"Property subtype: {test.get_property_subtype()}")
+        print(f"Number of bedrooms: {test.get_bedrooms()}")
+        print(f"Number of bathrooms: {test.get_bathrooms()}")
         print(f"Kitchen: {test.get_kitchen()}")
         print(f"Fireplace: {test.get_fireplace()}")
         print(f"Energy consumption per sm: {test.get_energy_consumption()}")

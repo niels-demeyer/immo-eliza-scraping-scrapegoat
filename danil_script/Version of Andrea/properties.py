@@ -76,6 +76,18 @@ class Single:
             return self.data["property"]["subtype"]
         except (TypeError, KeyError) as e:
             return str(e)
+        
+    def get_bedrooms(self):
+        try:
+            return self.data["property"]["bedroomCount"]
+        except (TypeError, KeyError) as e:
+            return str(e)
+        
+    def get_bathrooms(self):
+        try:
+            return self.data["property"]["bathroomCount"]
+        except (TypeError, KeyError) as e:
+            return str(e)
 
     def get_kitchen(self):
         try:
