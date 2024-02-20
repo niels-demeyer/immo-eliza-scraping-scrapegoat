@@ -20,3 +20,7 @@ scrapy_output_100 = scrapy_output[0:100]
 # Returns the first 100 href
 scrapy_output_100_href = [x["href"] for x in scrapy_output_100]
 pprint(scrapy_output_100_href)
+
+# Define a function that splits the hrefs correctly, make sure it returns a dictionary in the following way
+# https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11023593
+# {"domain": "immoweb.be", "language": "en", "classified": true, "type": "for-sale": true, "town_name": "brasschaat", "postal_code": 2930, "immoweb_code": 11023593}
