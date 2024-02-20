@@ -67,6 +67,11 @@ class WebScraper:
         # Get all address elements
         address_elements = page.query_selector_all(self.adress_selector)
 
+        # Check if the address elements is None or empty
+        if not address_elements:
+            # If it's None or empty, skip this iteration
+            return
+
         # Iterate over each pair of address elements
         for i in range(0, len(address_elements), 2):
             # Get the text content of the first address element
@@ -107,29 +112,28 @@ class WebScraper:
                 self.town_name.append(town_name)
 
     def get_overview(self, page):
-        # Get all elements with the class "overview__text"
-        overview_elements = page.query_selector_all(self.overview_selector)
+        # Get the overview element
+        overview_element = page.query_selector(self.overview_selector)
 
-        # Iterate over each overview element
-        for element in overview_elements:
-            # Get the text content of the overview element
-            overview_text = (
-                element.text_content()
-                .strip()  # Remove leading/trailing whitespace
-                .replace("\n", " ")  # Replace newlines with spaces
-                .replace("—", "")  # Remove dashes
-                .strip()  # Remove leading/trailing whitespace again
-            )
+        # Check if the overview element is None
+        if overview_element is None:
+            # If it's None, skip this iteration
+            return
 
-            # Remove extra spaces
-            overview_text = " ".join(overview_text.split())
+        # Get the text content of the overview element
+        overview_text = overview_element.text_content().strip()
 
-            # Append the cleaned overview text to the overview list
-            self.overview.append(overview_text)
+        # Append the cleaned overview text to the overview list
+        self.overview.append(overview_text)
 
     def get_description(self, page):
         # Get the description element
         description_element = page.query_selector(self.description_selector)
+
+        # Check if the description element is None
+        if description_element is None:
+            # If it's None, skip this iteration
+            return
 
         # Get the text content of the description element
         description_text = (
@@ -233,16 +237,16 @@ class WebScraper:
             browser.close()
 
 
-# Usage
-scraper = WebScraper(
-    # "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
-    "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
-    # "https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/seraing/4100/11109402"
-)
-scraper.scrape()
-print(scraper.street_name)
-print(scraper.postal_code)
-print(scraper.town_name)
-print(scraper.overview)
-print(scraper.description)
-print(scraper.info)
+# # Usage
+# scraper = WebScraper(
+#     # "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
+#     "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
+#     # "https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/seraing/4100/11109402"
+# )
+# scraper.scrape()
+# print(scraper.street_name)
+# print(scraper.postal_code)
+# print(scraper.town_name)
+# print(scraper.overview)
+# print(scraper.description)
+# print(scraper.info)
