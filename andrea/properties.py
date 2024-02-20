@@ -40,110 +40,109 @@ class Single:
     
     def __init__(self, raw):
         self.data = raw     
-    
-    def get_id (self):
-        return self.data["id"]
-
-    def get_type (self):
-        return self.data["property"]["type"]
-    
-    def get_subtype(self):
-        return self.data["property"]["subtype"]
-    
-    def get_living_area (self):
-        return self.data["property"]["netHabitableSurface"]   
-        
-    def get_number_bedrooms(self):
-        return self.data["property"]["bedroomCount"]
-    
-    def get_number_bathrooms(self):
-        return self.data["property"]["bathroomCount"]
 
     def get_price(self):
-        return self.data["transaction"]["sale"]["price"]    
+        try:
+            return self.data["transaction"]["sale"]["price"]
+        except Exception as e:
+            return str(e)
 
     def get_postal_code(self):
-        return self.data["property"]["location"]["postalCode"]
+        try:
+            return self.data["property"]["location"]["postalCode"]
+        except Exception as e:
+            return str(e)
 
     def get_city(self):
-        return self.data["property"]["location"]["locality"]
+        try:
+            return self.data["property"]["location"]["locality"]
+        except Exception as e:
+            return str(e)
 
     def get_kitchen(self):
-        if self.data["property"]["kitchen"]["type"] != "NOT_INSTALLED":
-            return 1
-        else:
-            return 0
+        try:
+            if self.data["property"]["kitchen"]["type"] != "NOT_INSTALLED":
+                return 1
+            else:
+                return 0
+        except Exception as e:
+            return str(e)
 
     def get_fireplace(self):
-        if self.data["property"]["fireplaceExists"]:
-            return 1
-        else:
-            return 0
+        try:
+            if self.data["property"]["fireplaceExists"]:
+                return 1
+            else:
+                return 0
+        except Exception as e:
+            return str(e)
 
     def get_facades(self):
-        facade = self.data["property"]["building"]["facadeCount"]
-        if facade != "null" or facade != None:
-            return facade
-        else:
-            return None
-    
-    def get_energy_consumption(self):
-        energy_sm = self.data["transaction"]["certificates"]["primaryEnergyConsumptionPerSqm"]
-        if energy_sm != "null" or energy_sm != None:
-            return energy_sm
-        else:
-            return None
-    
- 
-    # So far in my tests I can get any characteristcs, keys are listed in the googlesheets tab Json
-
-# WORKING ON IT
-# if will probably inherit from Single for some properties (DO TO) 
-class Multiple:
-    def __init__(self, raw):
-        self.data = raw 
-        self.number_unities = self.count_unities()
-        
-        self.unities = self.agregate_available_unities()
-        self.number_unsold_unities = len(self.unities)
-        
-    def agregate_available_unities(self):
-        available_unities = []
-        for position in range(self.number_unities):
-            if self.get_mult_price(position) == None or self.get_mult_sale_status(position) == "SOLD":
-                pass
+        try:
+            facade = self.data["property"]["building"]["facadeCount"]
+            if facade != "null" and facade != None:
+                return facade
             else:
-                unity = {}
-                unity["id"] = self.get_mult_id(position)
-                unity["price"] = self.get_mult_price(position)
-                unity["subtype"] = self.get_mult_subtype(position)
-                unity["sale_status"] = self.get_mult_sale_status(position)
-                unity["number_bedrooms"] = self.get_mult_bedrooms (position)
-                unity["surface"] = self.get_mult_surface(position) 
-                available_unities.append(unity)
-        return available_unities
+                return None
+        except Exception as e:
+            return str(e)
 
-    def count_unities(self):
-        return (len(self.data["cluster"]["units"][0]["items"]))
+    def get_energy_consumption(self):
+        try:
+            energy_sm = self.data["transaction"]["certificates"]["primaryEnergyConsumptionPerSqm"]
+            if energy_sm != "null" or energy_sm != None:
+                return energy_sm
+            else:
+                return None
+        except Exception as e:
+            return str(e)
 
-  
+    def get_terrace_area(self):
+        try:
+            terrace_area = self.data["property"]["terraceSurface"]
+            if terrace_area:
+                return terrace_area
+            else:
+                return None
+        except Exception as e:
+            return str(e)
+
+    def get_swimming_pool(self):
+        try:
+            swimming_pool = self.data['property']['hasSwimmingPool']
+            if swimming_pool:
+                return 1
+            else:
+                return 0
+        except Exception as e:
+            return str(e)
+
+    def get_state_of_building(self):
+        try:
+            state_of_building = self.data['property']['building']['condition']
+            if state_of_building == "GOOD":
+                return "good"
+            elif state_of_building == "JUST_RENOVATED":
+                return "just renovated"
+            elif state_of_building == "AS_NEW":
+                return "as new"
+            elif state_of_building == "TO_BE_DONE_UP":
+                return "to be done up"
+            elif state_of_building == "TO_RENOVATE":
+                return "to renovate"
+            else:
+                return state_of_building
+        except Exception as e:
+            return str(e)
+
+    def get_construction_year(self):
+        try:
+            construction_year = self.data['property']['building']['constructionYear']
+            if construction_year:
+                return construction_year
+            else:
+                return None
+        except Exception as e:
+            return str(e)
+        
     
-    def get_mult_id(self, position):
-        return self.data["cluster"]["units"][0]["items"][position]["id"]
-
-    def get_mult_price (self, position):
-        return self.data["cluster"]["units"][0]["items"][position]["price"]
-
-    def get_mult_subtype (self,position):
-        return self.data["cluster"]["units"][0]["items"][position]["subtype"]
-
-    def get_mult_sale_status (self,position):
-        return self.data["cluster"]["units"][0]["items"][position]["saleStatus"]
-
-    def get_mult_bedrooms (self, position):
-        return self.data["cluster"]["units"][0]["items"][position]["bedroomCount"]
-    def get_mult_surface (self, position):
-        return self.data["cluster"]["units"][0]["items"][position]["surface"]
-
-
-
