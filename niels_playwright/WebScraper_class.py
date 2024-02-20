@@ -249,7 +249,12 @@ class WebScraper:
             # Iterate over each url
             for url in self.urls:
                 # Navigate to the page
-                page.goto(url)
+                response = page.goto(url)
+
+                # Check the status code of the response
+                if response.status != 200:
+                    print(f"Failed to load {url}, status code: {response.status}")
+                    continue
 
                 # Use the click_button method
                 self.click_button(page)
