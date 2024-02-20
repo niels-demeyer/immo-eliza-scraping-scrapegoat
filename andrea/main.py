@@ -1,6 +1,8 @@
 import json
 from properties import ExtractPage
-from utils import Export 
+from utils import Export
+
+
 
 
 
@@ -32,26 +34,25 @@ links = ['https://www.immoweb.be/en/classified/apartment/for-sale/etterbeek/1040
         'https://www.immoweb.be/en/classified/service-flat/for-sale/asse/1730/11100778']
 
 def main():
- 
+    
+    csv_field_names = ["Link", "Price", "Kitchen", "City", "Fireplace", "Energy_sqm","Facades", "Terrace_area", "Swimming_pool","State_building", "Construction_year"]
     csv_filepath = "listing.csv"
+    
 
     i = 0
     # TO DO, plug function/method/something that will read the hrefs
     # Looping links
     for link in links:
-        print("test", i)
-        print(link)       
-        
         # Initializes extraction of html and parsing
         extract = ExtractPage(link)
 
         # Filters if page has only one property of many listed inside
         if extract.single:
-            page_dictionary = {}
-            page_dictionary ["Link"] = link 
-            page_dictionary.update(build_page_dict(extract.raw))
-            to_csv_file(filepath= csv_filepath, fieldnames=csv_field_names, info = page_dictionary)
-            print(page_dictionary)
+            page = Export(rawjson= extract.raw, link = link )
+            page.write_line_csv(filepath = csv_filepath , field_names = csv_field_names)
+
+  
+
 
             i += 1
         else:
