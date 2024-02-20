@@ -42,59 +42,107 @@ class Single:
         self.data = raw     
 
     def get_price(self):
-        return self.data["transaction"]["sale"]["price"]
+        try:
+            return self.data["transaction"]["sale"]["price"]
+        except Exception as e:
+            return str(e)
 
     def get_postal_code(self):
-        return self.data["property"]["location"]["postalCode"]
+        try:
+            return self.data["property"]["location"]["postalCode"]
+        except Exception as e:
+            return str(e)
 
     def get_city(self):
-        return self.data["property"]["location"]["locality"]
+        try:
+            return self.data["property"]["location"]["locality"]
+        except Exception as e:
+            return str(e)
 
     def get_kitchen(self):
-        if self.data["property"]["kitchen"]["type"] != "NOT_INSTALLED":
-            return 1
-        else:
-            return 0
+        try:
+            if self.data["property"]["kitchen"]["type"] != "NOT_INSTALLED":
+                return 1
+            else:
+                return 0
+        except Exception as e:
+            return str(e)
 
     def get_fireplace(self):
-        if self.data["property"]["fireplaceExists"]:
-            return 1
-        else:
-            return 0
+        try:
+            if self.data["property"]["fireplaceExists"]:
+                return 1
+            else:
+                return 0
+        except Exception as e:
+            return str(e)
 
     def get_facades(self):
-        facade = self.data["property"]["building"]["facadeCount"]
-        if facade != "null" or facade != None:
-            return facade
-        else:
-            return None
-    
+        try:
+            facade = self.data["property"]["building"]["facadeCount"]
+            if facade != "null" and facade != None:
+                return facade
+            else:
+                return None
+        except Exception as e:
+            return str(e)
+
     def get_energy_consumption(self):
-        energy_sm = self.data["transaction"]["certificates"]["primaryEnergyConsumptionPerSqm"]
-        if energy_sm != "null" or energy_sm != None:
-            return energy_sm
-        else:
-            return None
-    # So far in my tests I can get any characteristcs, keys are listed in the googlesheets tab Json
+        try:
+            energy_sm = self.data["transaction"]["certificates"]["primaryEnergyConsumptionPerSqm"]
+            if energy_sm != "null" or energy_sm != None:
+                return energy_sm
+            else:
+                return None
+        except Exception as e:
+            return str(e)
 
-# WORKING ON IT
-# if will probably inherit from Single for some properties (DO TO) 
-class Multiple:
-    def __init__(self, raw):
-        self.data = raw 
-        self.number_unities = self.count_unities()
-        self.unities = []
+    def get_terrace_area(self):
+        try:
+            terrace_area = self.data["property"]["terraceSurface"]
+            if terrace_area:
+                return terrace_area
+            else:
+                return None
+        except Exception as e:
+            return str(e)
 
-        # each unity has an id, subtype, price, bedroom, surface
-        # I am thinking about what is the best datatype for this
-        # but I am thinking about making a list of lists
+    def get_swimming_pool(self):
+        try:
+            swimming_pool = self.data['property']['hasSwimmingPool']
+            if swimming_pool:
+                return 1
+            else:
+                return 0
+        except Exception as e:
+            return str(e)
 
-    def count_unities(self):
-        # not finished in test
-        print(self.data["cluster"]["units"][0]["items"])
-        pass
-    def get_unities_properties(self):
-        pass   
+    def get_state_of_building(self):
+        try:
+            state_of_building = self.data['property']['building']['condition']
+            if state_of_building == "GOOD":
+                return "good"
+            elif state_of_building == "JUST_RENOVATED":
+                return "just renovated"
+            elif state_of_building == "AS_NEW":
+                return "as new"
+            elif state_of_building == "TO_BE_DONE_UP":
+                return "to be done up"
+            elif state_of_building == "TO_RENOVATE":
+                return "to renovate"
+            else:
+                return state_of_building
+        except Exception as e:
+            return str(e)
 
-
-
+    def get_construction_year(self):
+        try:
+            construction_year = self.data['property']['building']['constructionYear']
+            if construction_year:
+                return construction_year
+            else:
+                return None
+        except Exception as e:
+            return str(e)
+        
+    
