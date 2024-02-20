@@ -22,8 +22,8 @@ duplicates_checked = FileUtils.return_solo_items(data=data)
 
 print(len(duplicates_checked))
 
-# Split duplicates_checked into twenty parts
-urls = [duplicates_checked[i * 5 : (i + 1) * 5] for i in range(20)]
+# Split duplicates_checked into ten parts starting from index 99
+urls = [duplicates_checked[i * 10 + 99 : (i + 1) * 10 + 99] for i in range(10)]
 
 
 def scrape_urls(urls):
