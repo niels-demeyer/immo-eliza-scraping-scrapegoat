@@ -1,4 +1,5 @@
 from playwright.sync_api import sync_playwright
+import time
 
 
 class WebScraper:
@@ -248,6 +249,7 @@ class WebScraper:
 
             # Iterate over each url
             for url in self.urls:
+                time.sleep(3)
                 # Navigate to the page
                 response = page.goto(url)
 

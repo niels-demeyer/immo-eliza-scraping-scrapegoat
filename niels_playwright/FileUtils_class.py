@@ -14,6 +14,23 @@ class FileUtils:
         with open(file_path, "r") as f:
             return json.load(f)
 
+    def check_duplicates_json_file(file_path, data):
+        with open(file_path, "r") as f:
+            old_data = json.load(f)
+            for d in data:
+                if d not in old_data:
+                    old_data.append(d)
+        with open(file_path, "w") as f:
+            json.dump(old_data, f, indent=4)
+
+    def return_solo_items(data):
+        solo_items = []
+        for item in data:
+            if "href" in item:
+                if item["href"] not in solo_items:
+                    solo_items.append(item["href"])
+        return solo_items
+
     @staticmethod
     def create_directory(directory):
         if not os.path.exists(directory):
