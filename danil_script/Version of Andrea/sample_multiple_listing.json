@@ -1,0 +1,629 @@
+{
+    "id": 11072139,
+    "cluster": {
+        "minPrice": 229900,
+        "maxPrice": 249900,
+        "minSurface": 86,
+        "maxSurface": 105,
+        "projectInfo": {
+            "constructor": null,
+            "groupId": 11072139,
+            "phase": null,
+            "projectName": "Résidence \"Cobreville\"",
+            "deliveryDate": null,
+            "soldPercentage": null,
+            "unitsDisplayMode": "DETAILED"
+        },
+        "units": [
+            {
+                "type": "APARTMENT",
+                "maxPrice": 249900,
+                "minPrice": 229900,
+                "minRoom": 2,
+                "maxRoom": 3,
+                "minSurface": 86,
+                "maxSurface": 105,
+                "soldCount": 5,
+                "items": [
+                    {
+                        "id": 11072144,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 1,
+                        "price": 229900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 90
+                    },
+                    {
+                        "id": 11072150,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 1,
+                        "price": 229900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 89
+                    },
+                    {
+                        "id": 11072141,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "SOLD",
+                        "floor": 0,
+                        "price": null,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 84
+                    },
+                    {
+                        "id": 11072156,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "SOLD",
+                        "floor": 1,
+                        "price": null,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 92
+                    },
+                    {
+                        "id": 11072147,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 2,
+                        "price": 234900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 90
+                    },
+                    {
+                        "id": 11072140,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 0,
+                        "price": 234900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 86
+                    },
+                    {
+                        "id": 11072153,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 2,
+                        "price": 239900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 89
+                    },
+                    {
+                        "id": 11072143,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 1,
+                        "price": 239900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 96
+                    },
+                    {
+                        "id": 11072146,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 2,
+                        "price": 239900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 93
+                    },
+                    {
+                        "id": 11072142,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 0,
+                        "price": 239900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 87
+                    },
+                    {
+                        "id": 11072151,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 1,
+                        "price": 239900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 97
+                    },
+                    {
+                        "id": 11072155,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "SOLD",
+                        "floor": 1,
+                        "price": null,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 103
+                    },
+                    {
+                        "id": 11072149,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 1,
+                        "price": 239900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 101
+                    },
+                    {
+                        "id": 11072154,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 2,
+                        "price": 244900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 97
+                    },
+                    {
+                        "id": 11072152,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 2,
+                        "price": 244900,
+                        "bedroomCount": 2,
+                        "realEstateProjectPhase": null,
+                        "surface": 100
+                    },
+                    {
+                        "id": 11072145,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "SOLD",
+                        "floor": 1,
+                        "price": null,
+                        "bedroomCount": 3,
+                        "realEstateProjectPhase": null,
+                        "surface": 105
+                    },
+                    {
+                        "id": 11072148,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "AVAILABLE",
+                        "floor": 2,
+                        "price": 249900,
+                        "bedroomCount": 3,
+                        "realEstateProjectPhase": null,
+                        "surface": 105
+                    },
+                    {
+                        "id": 11072157,
+                        "subtype": "APARTMENT",
+                        "saleStatus": "SOLD",
+                        "floor": 1,
+                        "price": null,
+                        "bedroomCount": 3,
+                        "realEstateProjectPhase": null,
+                        "surface": 105
+                    }
+                ],
+                "minPriceVAT": null,
+                "maxPriceVAT": null
+            }
+        ],
+        "bedroomRange": "2 - 3",
+        "surfaceRange": "86 - 105",
+        "minPriceVAT": null,
+        "maxPriceVAT": null
+    },
+    "customers": [
+        {
+            "id": 3346893,
+            "type": "AGENCY",
+            "email": "honesty_libramont-chevig@importfrommedia.be",
+            "logoUrl": "https://static.immoweb.be/logos/3346893.gif?cache=2024491501190",
+            "phoneNumber": "+3261292414",
+            "mobileNumber": null,
+            "name": "Honesty Libramont - 7 bureaux proches de chez vous",
+            "website": "https://honesty.be/",
+            "location": {
+                "country": "Belgium",
+                "region": null,
+                "province": "Luxembourg",
+                "district": "Neufchâteau",
+                "locality": "Libramont",
+                "postalCode": "6800",
+                "street": "Avenue de Bouillon 92",
+                "number": null,
+                "box": null,
+                "propertyName": null,
+                "floor": null,
+                "latitude": 49.9136642,
+                "longitude": 5.3574997,
+                "distance": null,
+                "approximated": null,
+                "regionCode": null,
+                "type": null,
+                "hasSeaView": null,
+                "pointsOfInterest": null,
+                "placeName": null
+            },
+            "ipiNo": "504686",
+            "isOwner": true,
+            "contactHoursMobile": "anytime",
+            "contactHoursLandline": "anytime",
+            "salesRepresentative": null,
+            "features": {
+                "page404": true,
+                "investorFlag": false,
+                "relatedClassifieds": true,
+                "leafletsCTA": true,
+                "leadQualification": true,
+                "recommendation": true
+            }
+        }
+    ],
+    "premiumProjectPage": {
+        "medias": null,
+        "options": null,
+        "promoter": null,
+        "tabs": null
+    },
+    "flags": {
+        "isPublicSale": false,
+        "isNewClassified": false,
+        "isNewPrice": false,
+        "isInvestmentProject": false,
+        "isNewlyBuilt": true,
+        "isNotarySale": null,
+        "isLifeAnnuitySale": false,
+        "adQuality": null,
+        "date": null,
+        "priceSqm": null,
+        "price": null,
+        "default": null,
+        "isSoldOrRented": false,
+        "isLowEnergy": null,
+        "percentSold": null,
+        "isPassiveHouse": null,
+        "isNewRealEstateProject": true,
+        "isAnInteractiveSale": null,
+        "isUnderOption": false
+    },
+    "media": {
+        "pictures": [
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_1.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_1.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_1.jpg?cache=20240201062434",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_2.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_2.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_2.jpg?cache=20240201062434",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_3.gif?cache=20240201062859",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_3.jpg?cache=20240201062859",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_3.jpg?cache=20240201062859",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_4.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_4.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_4.jpg?cache=20240201062435",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_5.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_5.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_5.jpg?cache=20240201062435",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_6.gif?cache=20240201062859",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_6.jpg?cache=20240201062859",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_6.jpg?cache=20240201062859",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_7.gif?cache=20240201062859",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_7.jpg?cache=20240201062859",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_7.jpg?cache=20240201062859",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_8.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_8.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_8.jpg?cache=20240201062435",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_9.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_9.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_9.jpg?cache=20240201062435",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_0.gif?cache=20240201062859",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_0.jpg?cache=20240201062859",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_0.jpg?cache=20240201062859",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_A.gif?cache=20240201062859",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_A.jpg?cache=20240201062859",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_A.jpg?cache=20240201062859",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_B.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_B.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_B.jpg?cache=20240201062435",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_C.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_C.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_C.jpg?cache=20240201062435",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_D.gif?cache=20240201062435",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_D.jpg?cache=20240201062435",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_D.jpg?cache=20240201062435",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_E.gif?cache=20240201062436",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_E.jpg?cache=20240201062436",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_E.jpg?cache=20240201062436",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_F.gif?cache=20240201062436",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_F.jpg?cache=20240201062436",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_F.jpg?cache=20240201062436",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_G.gif?cache=20240201062436",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_G.jpg?cache=20240201062436",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_G.jpg?cache=20240201062436",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_H.gif?cache=20240215074401",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/M_11072139_H.jpg?cache=20240215074401",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/0/7/2/1/3/9/11072139_H.jpg?cache=20240215074401",
+                "isVertical": false
+            }
+        ],
+        "virtualTourUrl": null,
+        "floorPlans": null,
+        "specifications": null,
+        "virtualExperienceUrl": null
+    },
+    "property": {
+        "type": "APARTMENT_GROUP",
+        "subtype": "APARTMENT_GROUP",
+        "title": "New \"COBREVILLE\" residence in Vaux-sur-Sûre",
+        "description": "Honesty offers 15 modern flats with 2 and 3 bedrooms, cellars, covered and uncovered parking, lift, bike room and bin room. Each unit has a well-orientated garden or terrace.  Technical features include underfloor heating, single-flow ventilation system, PEB A.  Résidence Cobreville offers bright, carefully laid-out living spaces with large south-east-facing windows. Benefit from easy access to major roads and local amenities, while enjoying a level of comfort that distinguishes all our residential developments.  Contact us to reserve your future home in Cobreville!   Do you need an estimate for your house or flat before considering a purchase? Our estimates are free, honest and without obligation!  Sale subject to VAT.  3D non-contractual.",
+        "name": null,
+        "isHolidayProperty": null,
+        "bedroomCount": null,
+        "bedrooms": [],
+        "bathroomCount": null,
+        "bathrooms": [],
+        "location": {
+            "country": "Belgium",
+            "region": "Wallonie",
+            "province": "Luxembourg",
+            "district": "Bastogne",
+            "locality": "Vaux-sur-Sûre",
+            "postalCode": "6640",
+            "street": "Rue de Bastogne",
+            "number": "25",
+            "box": null,
+            "propertyName": null,
+            "floor": null,
+            "latitude": 49.9121568,
+            "longitude": 5.5725311,
+            "distance": null,
+            "approximated": null,
+            "regionCode": "WALLONIE",
+            "type": null,
+            "hasSeaView": null,
+            "pointsOfInterest": [
+                {
+                    "type": "SCHOOL",
+                    "distance": 0
+                },
+                {
+                    "type": "SHOPS",
+                    "distance": 0
+                },
+                {
+                    "type": "TRANSPORT",
+                    "distance": 0
+                }
+            ],
+            "placeName": "Zone Centre Province du Luxembourg"
+        },
+        "netHabitableSurface": null,
+        "roomCount": null,
+        "monthlyCosts": null,
+        "attic": null,
+        "hasAttic": null,
+        "basement": null,
+        "hasBasement": null,
+        "hasDressingRoom": null,
+        "diningRoom": null,
+        "hasDiningRoom": null,
+        "building": null,
+        "propertyCertificates": null,
+        "hasCaretakerOrConcierge": null,
+        "hasDisabledAccess": null,
+        "hasLift": null,
+        "constructionPermit": {
+            "constructionType": null,
+            "floodZoneType": "NON_FLOOD_ZONE",
+            "isObtained": null,
+            "hasObligationToConstruct": null,
+            "hasPlotDivisionAuthorization": null,
+            "hasPossiblePriorityPurchaseRight": null,
+            "isBreachingUrbanPlanningRegulation": null,
+            "floodZoneIconUrl": null,
+            "totalBuildableGroundFloorSurface": 0,
+            "urbanPlanningInformation": null,
+            "pScore": null,
+            "gScore": null
+        },
+        "energy": null,
+        "kitchen": null,
+        "land": null,
+        "laundryRoom": null,
+        "hasLaundryRoom": null,
+        "livingRoom": null,
+        "hasLivingRoom": false,
+        "isFirstOccupation": null,
+        "hasBalcony": null,
+        "hasBarbecue": null,
+        "hasGarden": null,
+        "gardenSurface": null,
+        "gardenOrientation": null,
+        "parkingCountIndoor": null,
+        "parkingCountOutdoor": null,
+        "parkingCountClosedBox": null,
+        "hasAirConditioning": null,
+        "hasArmoredDoor": null,
+        "hasVisiophone": null,
+        "hasSecureAccessAlarm": null,
+        "hasCableTV": null,
+        "hasDoorPhone": null,
+        "hasInternet": null,
+        "showerRoomCount": null,
+        "showerRooms": [],
+        "specificities": null,
+        "toiletCount": null,
+        "toilets": [],
+        "hasFitnessRoom": null,
+        "hasTennisCourt": null,
+        "hasSwimmingPool": null,
+        "hasSauna": null,
+        "hasJacuzzi": null,
+        "hasHammam": null,
+        "bedroomSurface": null,
+        "alternativeDescriptions": {
+            "fr": "!! OFFRE DE LANCEMENT !!*   Honesty vous présente 18 appartements modernes (dont 5 sont déjà vendus) offrant 2 et 3 chambres, caves, parkings couverts et non couverts, ascenseur, local vélo et local poubelle. Chaque unité dispose d'un jardin ou d'une terrasse bien orientés.  Les caractéristiques techniques incluent un chauffage au sol, un système de ventilation simple flux, PEB A.  La Résidence Cobreville propose des espaces de vie lumineux, soigneusement agencés, avec de grandes ouvertures orientées sud-est. Celle-ci est située à deux pas des grands axes, avec un accès facile vers Bastogne ainsi que le Luxembourg et des commodités locales, tout en profitant d'un niveau de confort qui distingue l'ensemble de nos projets résidentiels.   Contactez-nous dès aujourd'hui pour réserver votre futur chez-vous à Cobreville !   Vous avez besoin d'une estimation de votre maison ou appartement avant d'envisager un achat ? Nos estimations sont offertes, honnêtes et sans engagement !  Vente sous régime TVA.  *3D non contractuelles*.  *Voir conditions en agence - valable jusqu'au 30 avril 2024",
+            "nl": "Honesty presenteert 18 moderne appartementen (waarvan er al 3 zijn verkocht) met 2 en 3 slaapkamers, kelders, overdekte en onoverdekte parkeerplaats, lift, fietsenruimte en afvalruimte. Elke woning heeft een goed georiënteerde tuin of terras.  Technische voorzieningen zijn onder andere vloerverwarming, single-flow ventilatie en EPB A.  Résidence Cobreville biedt lichte, zorgvuldig ingerichte woonruimtes met grote ramen op het zuidoosten. Profiteer van de gemakkelijke toegang tot de hoofdwegen en lokale voorzieningen, terwijl u geniet van een niveau van comfort dat al onze woonontwikkelingen onderscheidt.  Neem vandaag nog contact met ons op om uw toekomstige huis in Cobreville te reserveren!   Wilt u een prijsopgave voor uw huis of appartement voordat u een aankoop overweegt? Onze schattingen zijn gratis, eerlijk en vrijblijvend!  Verkoop onderworpen aan btw.  3D niet contractueel."
+        },
+        "habitableUnitCount": null,
+        "fireplaceCount": null,
+        "fireplaceExists": false,
+        "hasTerrace": null,
+        "terraceSurface": null,
+        "terraceOrientation": null
+    },
+    "publication": {
+        "creationDate": "2024-01-15T05:14:30.000+0000",
+        "expirationDate": "2024-02-15T22:59:59.000+0000",
+        "publisherId": null,
+        "visualisationOption": "XL",
+        "lastModificationDate": "2024-02-18T23:19:27.317+0000"
+    },
+    "transaction": {
+        "type": "FOR_SALE",
+        "subtype": "BUY_REGULAR",
+        "availabilityPeriodType": "UPON_EXCHANGE_OF_DEEDS",
+        "availabilityDate": null,
+        "certificates": {
+            "carbonEmission": null,
+            "hasElectricalInstallationComplianceCertificate": null,
+            "primaryEnergyConsumptionPerSqm": null,
+            "primaryEnergyConsumptionYearly": null,
+            "epcDescription": null,
+            "epcReference": "RWPEB-148992",
+            "epcScore": null,
+            "epcUrl": null
+        },
+        "rental": null,
+        "sale": {
+            "price": null,
+            "isSubjectToVat": true,
+            "cadastralIncome": 0,
+            "publicSale": null,
+            "pricePerSqm": null,
+            "oldPrice": null,
+            "lifeAnnuity": null,
+            "hasStartingPrice": false,
+            "isFurnished": null,
+            "homeToBuild": null,
+            "newBuildsTotalPrice": "",
+            "newBuildsVAT": "",
+            "newBuildsLandPrice": "",
+            "newBuildsLandTaxes": ""
+        },
+        "investor": {
+            "isInvestmentProperty": false,
+            "currentMonthlyRentalIncome": null,
+            "currentReturnOnInvestment": null,
+            "expectedMonthlyRentalIncome": null,
+            "expectedMonthlyRentalIncomeDescription": null,
+            "expectedReturnOnInvestment": null,
+            "habitableUnitCount": null,
+            "occupancyRate": null
+        }
+    },
+    "priceType": null,
+    "price": {
+        "type": "group_sale",
+        "mainValue": null,
+        "alternativeValue": null,
+        "additionalValue": null,
+        "oldValue": null,
+        "minRangeValue": 229900,
+        "maxRangeValue": 249900,
+        "mainDisplayPrice": "€229,900 - €249,900",
+        "HTMLDisplayPrice": "<span aria-hidden=\"true\">€229,900 - €249,900</span>",
+        "alternativeDisplayPrice": "",
+        "oldDisplayPrice": null,
+        "shortDisplayPrice": "€229.9K - 249.9K",
+        "accessibilityPrice": "From 229900€ To 249900€",
+        "label": "Min price - Max price",
+        "date": null,
+        "language": "en"
+    },
+    "externalReference": "5642507",
+    "isBookmarked": false,
+    "hasSectionsArray": {
+        "hasGeneralSection": true,
+        "hasInteriorSection": false,
+        "hasExteriorSection": false,
+        "hasFacilitiesSection": false,
+        "hasEnergySection": true,
+        "hasPlanningSection": true,
+        "hasFinancialSection": true,
+        "hasPublicSaleSection": false
+    },
+    "unitGroupings": [],
+    "displayFlags": {
+        "main": null,
+        "secondary": [
+            "new_real_estate_project"
+        ],
+        "percentSold": null
+    },
+    "statistics": {
+        "bookmarkCount": 4,
+        "viewCount": 404,
+        "alertPrice": null,
+        "creationDate": null,
+        "description": null,
+        "isAlertEmailSet": null,
+        "rating": null,
+        "wasOwnerContacted": null,
+        "wasPropertyVisited": null
+    }
+}
