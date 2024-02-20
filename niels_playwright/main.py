@@ -1,5 +1,7 @@
 import os
 
+from pprint import pprint
+
 from FileUtils_class import FileUtils
 from WebScraper_class import WebScraper
 
@@ -21,5 +23,5 @@ for url in urls:
     # Create an instance of the WebScraper class with a URL
     scraper = WebScraper(url)
     scraper.scrape()
-    street_name = scraper.street_name
-    print(street_name)
+    results = scraper.get_results()
+    pprint(results)

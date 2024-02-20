@@ -20,8 +20,17 @@ class WebScraper:
         self.overview = []
         self.description = []
         self.info = {}
-        # Initialize the hrefs variable
         self.hrefs = []
+
+    def get_results(self):
+        return {
+            "street_name": self.street_name,
+            "postal_code": self.postal_code,
+            "town_name": self.town_name,
+            "overview": self.overview,
+            "description": self.description,
+            "info": self.info,
+        }
 
     def click_button(self, page):
         page.wait_for_selector(self.button_selector)
@@ -235,18 +244,3 @@ class WebScraper:
 
             # Close the browser
             browser.close()
-
-
-# # Usage
-# scraper = WebScraper(
-#     # "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
-#     "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
-#     # "https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/seraing/4100/11109402"
-# )
-# scraper.scrape()
-# print(scraper.street_name)
-# print(scraper.postal_code)
-# print(scraper.town_name)
-# print(scraper.overview)
-# print(scraper.description)
-# print(scraper.info)
