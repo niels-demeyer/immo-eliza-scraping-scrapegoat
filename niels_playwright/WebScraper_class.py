@@ -236,8 +236,8 @@ class WebScraper:
 # Usage
 scraper = WebScraper(
     # "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
-    # "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
-    "https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/seraing/4100/11109402"
+    "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
+    # "https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/seraing/4100/11109402"
 )
 scraper.scrape()
 print(scraper.street_name)
