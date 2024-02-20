@@ -25,7 +25,6 @@ links = ['https://www.immoweb.be/en/classified/apartment/for-sale/etterbeek/1040
         'https://www.immoweb.be/en/classified/exceptional-property/for-sale/braives/4260/11146418',
         'https://www.immoweb.be/en/classified/apartment/for-sale/maisieres/7020/10990864',
         'https://www.immoweb.be/en/classified/service-flat/for-sale/asse/1730/11100778']
-
 def main(url):
 
     # Initializes extraction of html and parsing
@@ -36,16 +35,25 @@ def main(url):
         test = Single (extract.raw)
         # For now just printing all the properties that where extracted
         # Later to put it into a dictionary or other data type to write on the csv
-        print (f"Price: {test.get_price()}")
-        print (f"Kitchen: {test.get_kitchen()}")
-        print (f"City: {test.get_city()}")
-        print (f"Fireplace: {test.get_fireplace()}")
-        print( f"Energy consumption per sm: {test.get_energy_consumption()}")
-        print (f"The number of facades: {test.get_facades()}")
+        print(f"Id: {test.get_id()}")
+        print(f"City: {test.get_city()}")
+        print(f"Postal Code: {test.get_postal_code()}")
+        print(f"Price: {test.get_price()}")
+        print(f"Property type: {test.get_property_type()}")
+        print(f"Property subtype: {test.get_property_subtype()}")
+        print(f"Number of bedrooms: {test.get_bedrooms()}")
+        print(f"Number of bathrooms: {test.get_bathrooms()}")
+        print(f"Kitchen: {test.get_kitchen()}")
+        print(f"Fireplace: {test.get_fireplace()}")
+        print(f"Energy consumption per sm: {test.get_energy_consumption()}")
+        print(f"The number of facades: {test.get_facades()}")
         print(f"The terrace area: {test.get_terrace_area()}")
         print(f"Swimming pool: {test.get_swimming_pool()}")
         print(f"The state of building: {test.get_state_of_building()}")
         print(f"Construction year: {test.get_construction_year()}")
+        print(f"Type of sale: {test.get_type_of_sale()}")
+        print(f"Subtype of sale: {test.get_subtype_of_sale()}")
+        print(f"Number of floors {test.get_number_of_floors()}")
     # If page has multiple properties listed inside
     else:
         print ("multiple")
