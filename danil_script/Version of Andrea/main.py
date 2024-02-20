@@ -25,7 +25,6 @@ links = ['https://www.immoweb.be/en/classified/apartment/for-sale/etterbeek/1040
         'https://www.immoweb.be/en/classified/exceptional-property/for-sale/braives/4260/11146418',
         'https://www.immoweb.be/en/classified/apartment/for-sale/maisieres/7020/10990864',
         'https://www.immoweb.be/en/classified/service-flat/for-sale/asse/1730/11100778']
-
 def main(url):
 
     # Initializes extraction of html and parsing

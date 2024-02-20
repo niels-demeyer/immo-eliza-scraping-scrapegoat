@@ -173,19 +173,35 @@ class Single:
         
     def get_type_of_sale(self):
         try:
-            return self.data["transaction"]["type"]
+            return self.data["price"]["type"]
         except (TypeError, KeyError) as e:
             return str(e)
         
     def get_subtype_of_sale(self):
         try:
-            return self.data["transaction"]["subtype"]
+            return self.data["transaction"]["type"]
         except (TypeError, KeyError) as e:
             return str(e)
         
     def get_number_of_floors(self):
         try:
-            return self.data["property"]["building"]["floorCount"]
+            if self.data['property'] is not None and self.data['property']['building'] is not None:
+                floor_count = self.data['property']['building']['floorCount']
+                return floor_count
+            else:
+                return None
+        except (TypeError, KeyError) as e:
+            return str(e)
+        
+    def get_living_area(self):
+        try:
+            return self.data["property"]["netHabitableSurface"]
+        except (TypeError, KeyError) as e:
+            return str(e)
+        
+    def get_floor(self):
+        try:
+            return self.data["location"]["floor"]
         except (TypeError, KeyError) as e:
             return str(e)
         
