@@ -1,0 +1,496 @@
+{
+    "id": 11144033,
+    "cluster": null,
+    "customers": [
+        {
+            "id": 1989885,
+            "type": "AGENCY",
+            "email": "cryptxim_gent@importfrommedia.be",
+            "logoUrl": "https://static.immoweb.be/logos/1989885.gif?cache=2024521001287",
+            "phoneNumber": "+3292735555",
+            "mobileNumber": null,
+            "name": "Immo Da Vinci",
+            "website": "http://www.immodavinci.be",
+            "location": {
+                "country": "Belgium",
+                "region": null,
+                "province": "East Flanders",
+                "district": "Gent",
+                "locality": "Gent",
+                "postalCode": "9000",
+                "street": "Sint-Denijslaan 1",
+                "number": null,
+                "box": null,
+                "propertyName": null,
+                "floor": null,
+                "latitude": 51.0337267,
+                "longitude": 3.7150994,
+                "distance": null,
+                "approximated": null,
+                "regionCode": null,
+                "type": null,
+                "hasSeaView": null,
+                "pointsOfInterest": null,
+                "placeName": null
+            },
+            "ipiNo": "504254",
+            "isOwner": true,
+            "contactHoursMobile": "anytime",
+            "contactHoursLandline": "anytime",
+            "salesRepresentative": null,
+            "features": {
+                "page404": true,
+                "investorFlag": false,
+                "relatedClassifieds": true,
+                "leafletsCTA": false,
+                "leadQualification": true,
+                "recommendation": true
+            }
+        }
+    ],
+    "premiumProjectPage": {
+        "medias": null,
+        "options": null,
+        "promoter": null,
+        "tabs": null
+    },
+    "flags": {
+        "isPublicSale": false,
+        "isNewClassified": true,
+        "isNewPrice": false,
+        "isInvestmentProject": false,
+        "isNewlyBuilt": false,
+        "isNotarySale": null,
+        "isLifeAnnuitySale": false,
+        "adQuality": null,
+        "date": null,
+        "priceSqm": null,
+        "price": null,
+        "default": null,
+        "isSoldOrRented": false,
+        "isLowEnergy": null,
+        "percentSold": null,
+        "isPassiveHouse": null,
+        "isNewRealEstateProject": false,
+        "isAnInteractiveSale": null,
+        "isUnderOption": false
+    },
+    "media": {
+        "pictures": [
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_1.gif?cache=20240215055902",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_1.jpg?cache=20240215055902",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_1.jpg?cache=20240215055902",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_2.gif?cache=20240215055902",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_2.jpg?cache=20240215055902",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_2.jpg?cache=20240215055902",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_3.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_3.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_3.jpg?cache=20240215055902",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_4.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_4.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_4.jpg?cache=20240215055902",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_5.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_5.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_5.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_6.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_6.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_6.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_7.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_7.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_7.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_8.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_8.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_8.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_9.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_9.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_9.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_0.gif?cache=20240215055902",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_0.jpg?cache=20240215055902",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_0.jpg?cache=20240215055902",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_A.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_A.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_A.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_B.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_B.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_B.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_C.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_C.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_C.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_D.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_D.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_D.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_E.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_E.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_E.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_F.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_F.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_F.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_G.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_G.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_G.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_H.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_H.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_H.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_I.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_I.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_I.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_J.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_J.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_J.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_K.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_K.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_K.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_L.gif?cache=20240215055903",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_L.jpg?cache=20240215055903",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_L.jpg?cache=20240215055903",
+                "isVertical": false
+            },
+            {
+                "smallUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_M.gif?cache=20240215055904",
+                "mediumUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/M_11144033_M.jpg?cache=20240215055904",
+                "largeUrl": "https://static.immoweb.be/photos/1/1/1/4/4/0/3/3/11144033_M.jpg?cache=20240215055904",
+                "isVertical": false
+            }
+        ],
+        "virtualTourUrl": null,
+        "floorPlans": null,
+        "specifications": null,
+        "virtualExperienceUrl": null
+    },
+    "property": {
+        "type": "HOUSE",
+        "subtype": "HOUSE",
+        "title": "Woning gelegen aan de Bourgoyen te Gent",
+        "description": "Ligging:   De woning geniet van goede ligging nabij het Stedelijk Natuurreservaat Bourgoyen-Ossemeersen. U kan dus altijd genieten van het groen en wandelingen in het park. Verder zijn er vele winkels, restaurants, handelszaken en het centrum van Gent steeds makkelijk bereikbaar met de fiets of te voet. De woning is vervolgens ook gelegen nabij verscheidene uitvalswegen van Gent zoals de R40, R4 en de E40.  Indeling:  U komt binnen in de centrale inkomhal waarbij u direct toegang krijgt tot een grote polyvalente ruimte. Verder is er een aparte ruimte met de trappenhal en toegang tot een ruime koer. Wanneer u zich begeeft naar de eerste verdieping komt u terecht in de leefruimte met aansluitende open keuken, verder bevindt zich nog een badkamer op deze verdieping met douche. Op de tweede verdieping bevinden zich dan 2 volwaardige slaapkamers.  TROEVEN - centrale ligging - nabij belangrijke uitvalswegen - naast de Bourgoyen en parkuitzicht aan voorgevel   Voor meer info en/of bezoek bel Fanny Windels: 0472 01 51 51",
+        "name": null,
+        "isHolidayProperty": null,
+        "bedroomCount": 3,
+        "bedrooms": [
+            {
+                "surface": 17
+            },
+            {
+                "surface": 18
+            },
+            {
+                "surface": 15
+            }
+        ],
+        "bathroomCount": 1,
+        "bathrooms": [],
+        "location": {
+            "country": "Belgium",
+            "region": "Flanders",
+            "province": "East Flanders",
+            "district": "Gent",
+            "locality": "Gent",
+            "postalCode": "9000",
+            "street": "Brugsesteenweg",
+            "number": "252",
+            "box": null,
+            "propertyName": null,
+            "floor": null,
+            "latitude": 51.0664781,
+            "longitude": 3.6886469,
+            "distance": null,
+            "approximated": null,
+            "regionCode": "FLANDERS",
+            "type": "URBAN",
+            "hasSeaView": null,
+            "pointsOfInterest": [
+                {
+                    "type": "SCHOOL",
+                    "distance": 0
+                },
+                {
+                    "type": "SHOPS",
+                    "distance": 1500
+                },
+                {
+                    "type": "TRANSPORT",
+                    "distance": 0
+                }
+            ],
+            "placeName": "Gent en omstreken"
+        },
+        "netHabitableSurface": 154,
+        "roomCount": null,
+        "monthlyCosts": null,
+        "attic": null,
+        "hasAttic": null,
+        "basement": null,
+        "hasBasement": null,
+        "hasDressingRoom": null,
+        "diningRoom": null,
+        "hasDiningRoom": null,
+        "building": {
+            "annexCount": null,
+            "condition": "TO_BE_DONE_UP",
+            "constructionYear": 1932,
+            "facadeCount": 2,
+            "floorCount": 3,
+            "streetFacadeWidth": 6
+        },
+        "propertyCertificates": {
+            "builtPlanStatus": "NO",
+            "globalInsulationLevel": null,
+            "oilTankCertificateStatus": null,
+            "primaryEnergyConsumptionLevel": null
+        },
+        "hasCaretakerOrConcierge": null,
+        "hasDisabledAccess": false,
+        "hasLift": false,
+        "constructionPermit": {
+            "constructionType": null,
+            "floodZoneType": "NON_FLOOD_ZONE",
+            "isObtained": false,
+            "hasObligationToConstruct": null,
+            "hasPlotDivisionAuthorization": false,
+            "hasPossiblePriorityPurchaseRight": false,
+            "isBreachingUrbanPlanningRegulation": false,
+            "floodZoneIconUrl": null,
+            "totalBuildableGroundFloorSurface": 0,
+            "urbanPlanningInformation": null,
+            "pScore": null,
+            "gScore": null
+        },
+        "energy": {
+            "heatingType": "GAS",
+            "hasHeatPump": null,
+            "hasPhotovoltaicPanels": null,
+            "hasThermicPanels": null,
+            "hasCollectiveWaterHeater": null,
+            "hasDoubleGlazing": true,
+            "performance": null
+        },
+        "kitchen": {
+            "surface": 10,
+            "type": "USA_SEMI_EQUIPPED",
+            "hasOven": null,
+            "hasMicroWaveOven": null,
+            "hasDishwasher": null,
+            "hasWashingMachine": null,
+            "hasFridge": null,
+            "hasFreezer": null,
+            "hasSteamOven": null
+        },
+        "land": {
+            "hasGasWaterElectricityConnection": true,
+            "hasPlotToRear": null,
+            "isFacingStreet": null,
+            "isFlat": null,
+            "isWooded": null,
+            "landWidth": 6,
+            "latestUseDesignation": "RES",
+            "rearLand": null,
+            "sewerConnection": "CONNECTED",
+            "surface": 55
+        },
+        "laundryRoom": null,
+        "hasLaundryRoom": null,
+        "livingRoom": {
+            "surface": 21
+        },
+        "hasLivingRoom": true,
+        "isFirstOccupation": null,
+        "hasBalcony": null,
+        "hasBarbecue": null,
+        "hasGarden": true,
+        "gardenSurface": 8,
+        "gardenOrientation": null,
+        "parkingCountIndoor": null,
+        "parkingCountOutdoor": null,
+        "parkingCountClosedBox": null,
+        "hasAirConditioning": null,
+        "hasArmoredDoor": null,
+        "hasVisiophone": null,
+        "hasSecureAccessAlarm": null,
+        "hasCableTV": null,
+        "hasDoorPhone": true,
+        "hasInternet": null,
+        "showerRoomCount": 0,
+        "showerRooms": [],
+        "specificities": null,
+        "toiletCount": 1,
+        "toilets": [],
+        "hasFitnessRoom": null,
+        "hasTennisCourt": null,
+        "hasSwimmingPool": false,
+        "hasSauna": null,
+        "hasJacuzzi": null,
+        "hasHammam": null,
+        "bedroomSurface": null,
+        "alternativeDescriptions": {
+            "fr": "Ligging:  De woning geniet van goede ligging nabij het Stedelijk Natuurreservaat Bourgoyen-Ossemeersen. U kan dus altijd genieten van het groen en wandelingen in het park. Verder zijn er vele winkels, restaurants, handelszaken en het centrum van Gent steeds makkelijk bereikbaar met de fiets of te voet. De woning is vervolgens ook gelegen nabij verscheidene uitvalswegen van Gent zoals de R40, R4 en de E40.  Indeling:  U komt binnen in de centrale inkomhal waarbij u direct toegang krijgt tot een grote polyvalente ruimte. Verder is er een aparte ruimte met de trappenhal en toegang tot een ruime koer. Wanneer u zich begeeft naar de eerste verdieping komt u terecht in de leefruimte met aansluitende open keuken, verder bevindt zich nog een badkamer op deze verdieping met douche. Op de tweede verdieping bevinden zich dan 2 volwaardige slaapkamers.  TROEVEN - centrale ligging - nabij belangrijke uitvalswegen - naast de Bourgoyen en parkuitzicht aan voorgevel   Voor meer info en/of bezoek bel Fanny Windels: 0472 01 51 51",
+            "nl": "Ligging:  De woning geniet van goede ligging nabij het Stedelijk Natuurreservaat Bourgoyen-Ossemeersen. U kan dus altijd genieten van het groen en wandelingen in het park. Verder zijn er vele winkels, restaurants, handelszaken en het centrum van Gent steeds makkelijk bereikbaar met de fiets of te voet. De woning is vervolgens ook gelegen nabij verscheidene uitvalswegen van Gent zoals de R40, R4 en de E40.  Indeling:  U komt binnen in de centrale inkomhal waarbij u direct toegang krijgt tot een grote polyvalente ruimte. Dit gelijkvloers omvat 3 ruimtes die u naar eigen noden kan invullen ideaal voor een praktijkruimte, een vrij beroep of een hobbyruimte. Verder is er een aparte ruimte met de trappenhal en toegang tot een ruime koer. Wanneeru zich begeeft naar de eerste verdieping komt u terecht in de leefruimte met aansluitende open keuken, verder bevindt zich nog een badkamer op deze verdieping met douche. Op de tweede verdieping bevinden zich dan 2 volwaardige slaapkamers.  TROEVEN - centrale ligging - nabij belangrijke uitvalswegen - naast de Bourgoyen en parkuitzicht aan voorgevel   Voor meer info en/of bezoek bel Fanny: 0472 01 51 51"
+        },
+        "habitableUnitCount": null,
+        "fireplaceCount": null,
+        "fireplaceExists": false,
+        "hasTerrace": null,
+        "terraceSurface": null,
+        "terraceOrientation": null
+    },
+    "publication": {
+        "creationDate": "2024-02-15T05:54:14.000+0000",
+        "expirationDate": "2024-06-14T23:00:00.000+0000",
+        "publisherId": null,
+        "visualisationOption": "XL",
+        "lastModificationDate": "2024-02-19T09:25:47.260+0000"
+    },
+    "transaction": {
+        "type": "FOR_SALE",
+        "subtype": "BUY_REGULAR",
+        "availabilityPeriodType": "UPON_EXCHANGE_OF_DEEDS",
+        "availabilityDate": null,
+        "certificates": {
+            "carbonEmission": null,
+            "hasElectricalInstallationComplianceCertificate": null,
+            "primaryEnergyConsumptionPerSqm": 353,
+            "primaryEnergyConsumptionYearly": null,
+            "epcDescription": null,
+            "epcReference": "20230404-0002851651-RES-1",
+            "epcScore": "D",
+            "epcUrl": "https://static.immoweb.be/pics/peb/fla/d.png"
+        },
+        "rental": null,
+        "sale": {
+            "price": 289000,
+            "isSubjectToVat": false,
+            "cadastralIncome": 461,
+            "publicSale": null,
+            "pricePerSqm": null,
+            "oldPrice": null,
+            "lifeAnnuity": null,
+            "hasStartingPrice": false,
+            "isFurnished": false,
+            "homeToBuild": null,
+            "newBuildsTotalPrice": "",
+            "newBuildsVAT": "",
+            "newBuildsLandPrice": "",
+            "newBuildsLandTaxes": ""
+        },
+        "investor": {
+            "isInvestmentProperty": false,
+            "currentMonthlyRentalIncome": null,
+            "currentReturnOnInvestment": null,
+            "expectedMonthlyRentalIncome": null,
+            "expectedMonthlyRentalIncomeDescription": null,
+            "expectedReturnOnInvestment": null,
+            "habitableUnitCount": null,
+            "occupancyRate": null
+        }
+    },
+    "priceType": null,
+    "price": {
+        "type": "residential_sale",
+        "mainValue": 289000,
+        "alternativeValue": null,
+        "additionalValue": null,
+        "oldValue": null,
+        "minRangeValue": null,
+        "maxRangeValue": null,
+        "mainDisplayPrice": "€289,000",
+        "HTMLDisplayPrice": "<span aria-hidden=\"true\">€289,000</span>",
+        "alternativeDisplayPrice": "",
+        "oldDisplayPrice": null,
+        "shortDisplayPrice": "€289K",
+        "accessibilityPrice": "289000€",
+        "label": "Price",
+        "date": null,
+        "language": "en"
+    },
+    "externalReference": "5868162",
+    "isBookmarked": false,
+    "hasSectionsArray": {
+        "hasGeneralSection": true,
+        "hasInteriorSection": true,
+        "hasExteriorSection": true,
+        "hasFacilitiesSection": true,
+        "hasEnergySection": true,
+        "hasPlanningSection": true,
+        "hasFinancialSection": true,
+        "hasPublicSaleSection": false
+    },
+    "unitGroupings": [],
+    "displayFlags": {
+        "main": "new",
+        "secondary": [],
+        "percentSold": null
+    },
+    "statistics": {
+        "bookmarkCount": 2,
+        "viewCount": 945,
+        "alertPrice": null,
+        "creationDate": null,
+        "description": null,
+        "isAlertEmailSet": null,
+        "rating": null,
+        "wasOwnerContacted": null,
+        "wasPropertyVisited": null
+    }
+}
