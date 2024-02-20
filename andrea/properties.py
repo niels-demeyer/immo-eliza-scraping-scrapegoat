@@ -40,9 +40,27 @@ class Single:
     
     def __init__(self, raw):
         self.data = raw     
+    
+    def get_id (self):
+        return self.data["id"]
+
+    def get_type (self):
+        return self.data["property"]["type"]
+    
+    def get_subtype(self):
+        return self.data["property"]["subtype"]
+    
+    def get_living_area (self):
+        return self.data["property"]["netHabitableSurface"]   
+        
+    def get_number_bedrooms(self):
+        return self.data["property"]["bedroomCount"]
+    
+    def get_number_bathrooms(self):
+        return self.data["property"]["bathroomCount"]
 
     def get_price(self):
-        return self.data["transaction"]["sale"]["price"]
+        return self.data["transaction"]["sale"]["price"]    
 
     def get_postal_code(self):
         return self.data["property"]["location"]["postalCode"]
@@ -75,6 +93,8 @@ class Single:
             return energy_sm
         else:
             return None
+    
+ 
     # So far in my tests I can get any characteristcs, keys are listed in the googlesheets tab Json
 
 # WORKING ON IT
@@ -83,18 +103,47 @@ class Multiple:
     def __init__(self, raw):
         self.data = raw 
         self.number_unities = self.count_unities()
-        self.unities = []
-
-        # each unity has an id, subtype, price, bedroom, surface
-        # I am thinking about what is the best datatype for this
-        # but I am thinking about making a list of lists
+        
+        self.unities = self.agregate_available_unities()
+        self.number_unsold_unities = len(self.unities)
+        
+    def agregate_available_unities(self):
+        available_unities = []
+        for position in range(self.number_unities):
+            if self.get_mult_price(position) == None or self.get_mult_sale_status(position) == "SOLD":
+                pass
+            else:
+                unity = {}
+                unity["id"] = self.get_mult_id(position)
+                unity["price"] = self.get_mult_price(position)
+                unity["subtype"] = self.get_mult_subtype(position)
+                unity["sale_status"] = self.get_mult_sale_status(position)
+                unity["number_bedrooms"] = self.get_mult_bedrooms (position)
+                unity["surface"] = self.get_mult_surface(position) 
+                available_unities.append(unity)
+        return available_unities
 
     def count_unities(self):
-        # not finished in test
-        print(self.data["cluster"]["units"][0]["items"])
-        pass
-    def get_unities_properties(self):
-        pass   
+        return (len(self.data["cluster"]["units"][0]["items"]))
+
+  
+    
+    def get_mult_id(self, position):
+        return self.data["cluster"]["units"][0]["items"][position]["id"]
+
+    def get_mult_price (self, position):
+        return self.data["cluster"]["units"][0]["items"][position]["price"]
+
+    def get_mult_subtype (self,position):
+        return self.data["cluster"]["units"][0]["items"][position]["subtype"]
+
+    def get_mult_sale_status (self,position):
+        return self.data["cluster"]["units"][0]["items"][position]["saleStatus"]
+
+    def get_mult_bedrooms (self, position):
+        return self.data["cluster"]["units"][0]["items"][position]["bedroomCount"]
+    def get_mult_surface (self, position):
+        return self.data["cluster"]["units"][0]["items"][position]["surface"]
 
 
 
