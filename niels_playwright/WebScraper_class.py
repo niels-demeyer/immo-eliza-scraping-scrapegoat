@@ -2,9 +2,9 @@ from playwright.sync_api import sync_playwright
 
 
 class WebScraper:
-    def __init__(self, url):
+    def __init__(self, urls):
         # Initialize the url that is passed in
-        self.url = url
+        self.urls = urls
         # Initialize the selectors
         self.button_selector = 'button[data-testid="uc-accept-all-button"]'
         self.adress_selector = ".classified__information--address-row"
@@ -19,22 +19,51 @@ class WebScraper:
         self.town_name = []
         self.overview = []
         self.description = []
-        self.info = {}
+        self.info = []
         self.hrefs = []
+        self.results = []
 
     def get_results(self):
-        return {
-            "street_name": self.street_name,
-            "postal_code": self.postal_code,
-            "town_name": self.town_name,
-            "overview": self.overview,
-            "description": self.description,
-            "info": self.info,
-        }
+        # Initialize an empty list to store the results
+        results = []
+
+        # Iterate over the scraped data
+        for i in range(len(self.overview)):
+            # Create a dictionary for the current result
+            result = {
+                "address": {
+                    "street_name": (
+                        self.street_name[i] if i < len(self.street_name) else None
+                    ),
+                    "postal_code": (
+                        self.postal_code[i] if i < len(self.postal_code) else None
+                    ),
+                    "town_name": self.town_name[i] if i < len(self.town_name) else None,
+                },
+                "description": (
+                    self.description[i] if i < len(self.description) else None
+                ),
+                "info": self.info[i] if i < len(self.info) else None,
+                "overview": self.overview[i] if i < len(self.overview) else None,
+            }
+
+            # Add the result to the list of results
+            results.append(result)
+
+        # Update the results attribute
+        self.results = results
+
+        # Return the results
+        return self.results
 
     def click_button(self, page):
-        page.wait_for_selector(self.button_selector)
-        page.click(self.button_selector)
+        try:
+            # Check if the selector is found on the page
+            if page.query_selector(self.button_selector):
+                # If the selector is found, click it
+                page.click(self.button_selector)
+        except Exception as e:
+            print(f"An error occurred while clicking the button: {e}")
 
     def check_appartement(self, page):
         # Get all elements with the class "classified-with-plan__list-item classified__list-item-link"
@@ -79,7 +108,7 @@ class WebScraper:
         # Check if the address elements is None or empty
         if not address_elements:
             # If it's None or empty, skip this iteration
-            return
+            return None
 
         # Iterate over each pair of address elements
         for i in range(0, len(address_elements), 2):
@@ -120,20 +149,30 @@ class WebScraper:
                 self.postal_code.append(postal_code)
                 self.town_name.append(town_name)
 
+        # Return the address data
+        return {
+            "street_name": self.street_name,
+            "postal_code": self.postal_code,
+            "town_name": self.town_name,
+        }
+
     def get_overview(self, page):
         # Get the overview element
         overview_element = page.query_selector(self.overview_selector)
 
         # Check if the overview element is None
-        if overview_element is None:
+        if not overview_element:
             # If it's None, skip this iteration
-            return
+            return None
 
         # Get the text content of the overview element
-        overview_text = overview_element.text_content().strip()
+        overview = overview_element.text_content().strip()
 
-        # Append the cleaned overview text to the overview list
-        self.overview.append(overview_text)
+        # Add the overview to the list of overviews
+        self.overview.append(overview)
+
+        # Return the overview data
+        return {"overview": self.overview}
 
     def get_description(self, page):
         # Get the description element
@@ -142,7 +181,7 @@ class WebScraper:
         # Check if the description element is None
         if description_element is None:
             # If it's None, skip this iteration
-            return
+            return None
 
         # Get the text content of the description element
         description_text = (
@@ -159,9 +198,15 @@ class WebScraper:
         # Append the cleaned description text to the description list
         self.description.append(description_text)
 
+        # Return the description data
+        return {"description": self.description}
+
     def get_info(self, page):
         # Get all elements with the class "classified-table__body"
         table_elements = page.query_selector_all(".classified-table__body")
+
+        # Initialize an empty dictionary to store the info data
+        info_data = {}
 
         # Iterate over each table element
         for table in table_elements:
@@ -184,7 +229,13 @@ class WebScraper:
                     value = value_cell.inner_text().strip()
 
                     # Store the key-value pair in the info dictionary
-                    self.info[key] = value
+                    info_data[key] = value
+
+        # Add the info data to the list of info
+        self.info.append(info_data)
+
+        # Return the info data
+        return {"info": self.info}
 
     def scrape(self):
         with sync_playwright() as p:
@@ -195,49 +246,52 @@ class WebScraper:
             # Open a new page
             page = context.new_page()
 
-            # Navigate to the page
-            page.goto(self.url)
+            # Iterate over each url
+            for url in self.urls:
+                # Navigate to the page
+                page.goto(url)
 
-            # Use the click_button method
-            self.click_button(page)
+                # Use the click_button method
+                self.click_button(page)
 
-            # Use the is_appartement_available method
-            is_appartement = self.is_appartement_available(page)
+                # Use the is_appartement_available method
+                is_appartement = self.is_appartement_available(page)
 
-            if is_appartement:
-                print("Appartement is available")
+                if is_appartement:
+                    print("Appartement is available")
 
-                # Iterate over each href
-                for href in self.hrefs:
-                    # Navigate to the href
-                    page.goto(href)
+                    # Iterate over each href
+                    for href in self.hrefs:
+                        # Navigate to the href
+                        page.goto(href)
 
-                    # Use the get_address method
-                    self.get_address(page)
+                        # Get the results for this href
+                        result = {
+                            "address": self.get_address(page),
+                            "overview": self.get_overview(page),
+                            "description": self.get_description(page),
+                            "info": self.get_info(page),
+                        }
 
-                    # Use the get_overview method
-                    self.get_overview(page)
+                        # Append the result to the results list
+                        self.results.append(result)
 
-                    # Use the get_description method
-                    self.get_description(page)
+                else:
+                    print("No appartement available")
 
-                    # Use the get_info method
-                    self.get_info(page)
+                    # Get the results for this url
+                    result = {
+                        "address": self.get_address(page),
+                        "overview": self.get_overview(page),
+                        "description": self.get_description(page),
+                        "info": self.get_info(page),
+                    }
 
-            else:
-                print("No appartement available")
+                    # Append the result to the results list
+                    self.results.append(result)
 
-                # Use the get_address method
-                self.get_address(page)
-
-                # Use the get_overview method
-                self.get_overview(page)
-
-                # Use the get_description method
-                self.get_description(page)
-
-                # Use the get_info method
-                self.get_info(page)
+            # Close the page
+            page.close()
 
             # Close the browser context
             context.close()
