@@ -22,11 +22,12 @@ duplicates_checked = FileUtils.return_solo_items(data=data)
 
 print(len(duplicates_checked))
 
-# Split duplicates_checked into four parts
-urls1 = duplicates_checked[:25]
-urls2 = duplicates_checked[25:50]
-urls3 = duplicates_checked[50:75]
-urls4 = duplicates_checked[75:100]
+# Split duplicates_checked into five parts
+urls1 = duplicates_checked[:20]
+urls2 = duplicates_checked[20:40]
+urls3 = duplicates_checked[40:60]
+urls4 = duplicates_checked[60:80]
+urls5 = duplicates_checked[80:100]
 
 
 def scrape_urls(urls):
@@ -37,11 +38,12 @@ def scrape_urls(urls):
 
 # Use ThreadPoolExecutor to scrape each part concurrently
 with concurrent.futures.ThreadPoolExecutor() as executor:
-    results1, results2, results3, results4 = executor.map(
-        scrape_urls, [urls1, urls2, urls3, urls4]
+    results1, results2, results3, results4, results5 = executor.map(
+        scrape_urls, [urls1, urls2, urls3, urls4, urls5]
     )
 
 pprint(results1)
 pprint(results2)
 pprint(results3)
 pprint(results4)
+pprint(results5)
