@@ -10,6 +10,9 @@ class WebScraper:
         self.adress_selector = ".classified__information--address-row"
         self.overview_selector = ".overview__text"
         self.description_selector = ".classified__description"
+        self.appartement_selector = (
+            ".classified-with-plan__list-item.classified__list-item-link"
+        )
         # Initialize the result variables
         self.street_name = []
         self.postal_code = []
@@ -17,10 +20,48 @@ class WebScraper:
         self.overview = []
         self.description = []
         self.info = {}
+        # Initialize the hrefs variable
+        self.hrefs = []
 
     def click_button(self, page):
         page.wait_for_selector(self.button_selector)
         page.click(self.button_selector)
+
+    def check_appartement(self, page):
+        # Get all elements with the class "classified-with-plan__list-item classified__list-item-link"
+        appartement_elements = page.query_selector_all(self.appartement_selector)
+
+        # Clear the hrefs list
+        self.hrefs.clear()
+
+        # Iterate over each appartement element
+        for appartement in appartement_elements:
+            # Get the a tag in the appartement element
+            a_tag = appartement.query_selector("a")
+
+            # If the a tag exists
+            if a_tag:
+                # Get the href attribute of the a tag
+                href = a_tag.get_attribute("href")
+
+                # Add the href to the list
+                self.hrefs.append(href)
+
+        # Return the list of hrefs
+        return self.hrefs
+
+    def is_appartement_available(self, page):
+        # Call the check_appartement method and store its output
+        appartement_hrefs = self.check_appartement(page)
+
+        # If the output is empty
+        if not appartement_hrefs:
+            # Return False
+            return False
+
+        # If the output is not empty
+        # Return True
+        return True
 
     def get_address(self, page):
         # Get all address elements
@@ -147,17 +188,46 @@ class WebScraper:
             # Use the click_button method
             self.click_button(page)
 
-            # Use the get_address method
-            self.get_address(page)
+            # Use the is_appartement_available method
+            is_appartement = self.is_appartement_available(page)
 
-            # Use the get_overview method
-            self.get_overview(page)
+            if is_appartement:
+                print("Appartement is available")
 
-            # Use the get_description method
-            self.get_description(page)
+                # Iterate over each href
+                for href in self.hrefs:
+                    # Navigate to the href
+                    page.goto(href)
 
-            # Use the get_info method
-            self.get_info(page)
+                    # Use the get_address method
+                    self.get_address(page)
+
+                    # Use the get_overview method
+                    self.get_overview(page)
+
+                    # Use the get_description method
+                    self.get_description(page)
+
+                    # Use the get_info method
+                    self.get_info(page)
+
+            else:
+                print("No appartement available")
+
+                # Use the get_address method
+                self.get_address(page)
+
+                # Use the get_overview method
+                self.get_overview(page)
+
+                # Use the get_description method
+                self.get_description(page)
+
+                # Use the get_info method
+                self.get_info(page)
+
+            # Close the browser context
+            context.close()
 
             # Close the browser
             browser.close()
@@ -165,8 +235,9 @@ class WebScraper:
 
 # Usage
 scraper = WebScraper(
-    "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
+    # "https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11095027"
     # "https://www.immoweb.be/en/classified/villa/for-sale/overijse/3090/11150716"
+    "https://www.immoweb.be/en/classified/new-real-estate-project-apartments/for-sale/seraing/4100/11109402"
 )
 scraper.scrape()
 print(scraper.street_name)
