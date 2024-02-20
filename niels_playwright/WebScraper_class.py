@@ -249,7 +249,6 @@ class WebScraper:
 
             # Iterate over each url
             for url in self.urls:
-                time.sleep(2)
                 # Navigate to the page
                 response = page.goto(url)
 
