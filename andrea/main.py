@@ -35,12 +35,14 @@ links = ['https://www.immoweb.be/en/classified/apartment/for-sale/etterbeek/1040
 
 def main():
     
+    
     csv_field_names = ["Link", "Price", "Kitchen", "City", "Fireplace", "Energy_sqm","Facades", "Terrace_area", "Swimming_pool","State_building", "Construction_year"]
     csv_filepath = "listing.csv"
     
+    Export.open_clean_csv(filepath = csv_filepath , field_names = csv_field_names)
 
-    i = 0
-    # TO DO, plug function/method/something that will read the hrefs
+
+
     # Looping links
     for link in links:
         # Initializes extraction of html and parsing
@@ -51,10 +53,6 @@ def main():
             page = Export(rawjson= extract.raw, link = link )
             page.write_line_csv(filepath = csv_filepath , field_names = csv_field_names)
 
-  
-
-
-            i += 1
         else:
             pass
 

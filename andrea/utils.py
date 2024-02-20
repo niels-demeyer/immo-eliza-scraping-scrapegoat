@@ -34,12 +34,9 @@ class Export (Single):
             writer.writerow(self.page_dict)
 
     @staticmethod
-    def clean_csv ():
-        with open(filepath, 'a', newline='', encoding= 'utf-8') as csvfile:
+    def open_clean_csv(filepath, field_names):
+        with open(filepath, 'w', newline='', encoding= 'utf-8') as csvfile:
             csvfile.truncate()
-
-    @staticmethod
-    def open_clean_csv(dilepath, fieldnames):
-        with open(filepath, 'a', newline='', encoding= 'utf-8') as csvfile:
-            csvfile.truncate()
+            writer = csv.DictWriter(csvfile, fieldnames = field_names)            
+            writer.writeheader()
         
