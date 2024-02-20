@@ -4,9 +4,6 @@ from utils import Export
 
 
 
-
-
-
 links = ['https://www.immoweb.be/en/classified/apartment/for-sale/etterbeek/1040/11153755',
         'https://www.immoweb.be/en/classified/apartment/for-sale/evere/1140/11012764',
         'https://www.immoweb.be/en/classified/house/for-sale/anderlecht/1070/11150049',
@@ -35,27 +32,31 @@ links = ['https://www.immoweb.be/en/classified/apartment/for-sale/etterbeek/1040
 
 def main():
     
-    
+    # Initializes variables for CSV file
     csv_field_names = ["Link", "Price", "Kitchen", "City", "Fireplace", "Energy_sqm","Facades", "Terrace_area", "Swimming_pool","State_building", "Construction_year"]
     csv_filepath = "listing.csv"
     
+    # Starts a clean CSV file to be written
     Export.open_clean_csv(filepath = csv_filepath , field_names = csv_field_names)
 
 
+    # Starts main processing
+    # Looping links, this can be changed later to get the links from a json/csv/set
 
-    # Looping links
     for link in links:
-        # Initializes extraction of html and parsing
+        # Initializes extraction of html and parsing for raw json with raw info
         extract = ExtractPage(link)
 
-        # Filters if page has only one property of many listed inside
+        # Filters if webpage has only one property listed inside (single) or many (multiple)
         if extract.single:
+            # Builds a dictionary with all the characteristics of the property
             page = Export(rawjson= extract.raw, link = link )
+            # Writtes the dictionary in a line in the csv
             page.write_line_csv(filepath = csv_filepath , field_names = csv_field_names)
 
         else:
+            # we ignore webpage if multiple since links were already individually scrapped
             pass
-
 
 if __name__ == "__main__":
     main()
@@ -64,7 +65,7 @@ if __name__ == "__main__":
 
 
 """
-# Handy json dump to catch errors
+# Handy json dump to catch errors:
 url_question = "https://www.immoweb.be/en/classified/apartment/for-sale/fayt-lez-manage/7170/10682127"
 question = ExtractPage(url_question)
 namefile = "testing.json"
