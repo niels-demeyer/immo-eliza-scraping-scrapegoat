@@ -21,5 +21,5 @@ urls = [d["href"] for d in data[:100]]
 
 scraper = WebScraper(urls=urls)
 scraper.scrape()
-results = scraper.get_results()  # Add parentheses here
+results = scraper.get_results()
 pprint(results)
