@@ -20,5 +20,14 @@ scrapy_output_100_href = []
 
 
 # Define a function that splits the hrefs correctly, make sure it returns a dictionary in the following way
+# Input:
 # https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11023593
+# Output:
 # {"domain": "immoweb.be", "language": "en", "classified": true, "type": "for-sale": true, "town_name": "brasschaat", "postal_code": 2930, "immoweb_code": 11023593}
+
+
+# Input:
+# {"domain": "immoweb.be", "language": "en", "classified": true, "type": "for-sale": true, "town_name": "brasschaat", "postal_code": 2930, "immoweb_code": 11023593}
+# Output:
+# https://www.immoweb.be/en/classified/villa/for-sale/brasschaat/2930/11023593
+# Define a function that puts the href back together
