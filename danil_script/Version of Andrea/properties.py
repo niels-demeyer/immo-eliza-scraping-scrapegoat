@@ -24,7 +24,7 @@ class ExtractPage:
 
     def is_single_listing(self) -> bool: 
         # Uses key "cluster" to filter if multiple or single       
-        if self.raw["cluster"] == "null" or self.raw["cluster"] == None:            
+        if self.raw["cluster"] == "null" or self.raw["cluster"] is None:            
             return True
         else:
             return False
@@ -41,22 +41,40 @@ class Single:
     def __init__(self, raw):
         self.data = raw     
 
+    def get_id(self):
+        try:
+            return self.data["id"]
+        except (TypeError, KeyError) as e:
+            return str(e)
+
     def get_price(self):
         try:
             return self.data["transaction"]["sale"]["price"]
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_postal_code(self):
         try:
             return self.data["property"]["location"]["postalCode"]
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_city(self):
         try:
             return self.data["property"]["location"]["locality"]
-        except Exception as e:
+        except (TypeError, KeyError) as e:
+            return str(e)
+        
+    def get_property_type(self):
+        try:
+            return self.data["property"]["type"]
+        except (TypeError, KeyError) as e:
+            return str(e)
+        
+    def get_property_subtype(self):
+        try:
+            return self.data["property"]["subtype"]
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_kitchen(self):
@@ -65,7 +83,7 @@ class Single:
                 return 1
             else:
                 return 0
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_fireplace(self):
@@ -74,7 +92,7 @@ class Single:
                 return 1
             else:
                 return 0
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_facades(self):
@@ -85,7 +103,7 @@ class Single:
                     if facade is not None and facade != "null":
                         return facade
                 return None
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_energy_consumption(self):
@@ -95,7 +113,7 @@ class Single:
                 if energy_sm is not None and energy_sm != "null":
                     return energy_sm
             return None
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_terrace_area(self):
@@ -105,7 +123,7 @@ class Single:
                 return terrace_area
             else:
                 return None
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_swimming_pool(self):
@@ -115,7 +133,7 @@ class Single:
                 return 1
             else:
                 return 0
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_state_of_building(self):
@@ -125,7 +143,7 @@ class Single:
                 return state_of_building
             else:
                 return None
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
 
     def get_construction_year(self):
@@ -138,9 +156,28 @@ class Single:
                     return None
             else:
                 return None
-        except Exception as e:
+        except (TypeError, KeyError) as e:
             return str(e)
         
+    def get_type_of_sale(self):
+        try:
+            return self.data["transaction"]["type"]
+        except (TypeError, KeyError) as e:
+            return str(e)
+        
+    def get_subtype_of_sale(self):
+        try:
+            return self.data["transaction"]["subtype"]
+        except (TypeError, KeyError) as e:
+            return str(e)
+        
+    def get_number_of_floors(self):
+        try:
+            return self.data["property"]["building"]["floorCount"]
+        except (TypeError, KeyError) as e:
+            return str(e)
+        
+    
     
     # So far in my tests I can get any characteristcs, keys are listed in the googlesheets tab Json
 
