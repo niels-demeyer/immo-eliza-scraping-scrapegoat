@@ -2,6 +2,7 @@ import os
 import shutil
 import json
 import csv
+import sqlite3
 
 
 class FileUtils:
@@ -49,9 +50,52 @@ class FileUtils:
             print(f"UnicodeEncodeError: {e}")
 
     @staticmethod
-    def write_json_file(file_path, data):
-        with open(file_path, "w") as f:
-            json.dump(data, f, indent=4)
+    def write_dict_to_sqlite(db_path, table_name, data):
+        # Create a connection to the SQLite database
+        conn = sqlite3.connect(db_path)
+
+        # Create a cursor object
+        cur = conn.cursor()
+
+        # Check if data is a list
+        if isinstance(data, list):
+            # Flatten each dictionary in the list
+            flat_data_list = [FileUtils.flatten_dict(item) for item in data]
+        else:
+            # If data is not a list, assume it's a dictionary and flatten it
+            flat_data_list = [FileUtils.flatten_dict(data)]
+
+        # Normalize keys and get all keys used in any dictionary
+        all_keys = set().union(*(d.keys() for d in flat_data_list))
+        normalized_keys = [key.strip().lower() for key in all_keys]
+
+        # Create table if not exists
+        cur.execute(
+            f"CREATE TABLE IF NOT EXISTS {table_name} ({', '.join(normalized_keys)})"
+        )
+
+        # Dynamically alter table to add missing columns
+        cur.execute(f"PRAGMA table_info({table_name})")
+        existing_columns = [column[1] for column in cur.fetchall()]
+        for key in normalized_keys:
+            if key not in existing_columns:
+                cur.execute(f"ALTER TABLE {table_name} ADD COLUMN {key}")
+
+        # Insert data into table
+        for flat_data in flat_data_list:
+            # Normalize keys in flat_data
+            normalized_data = {
+                key.strip().lower(): value for key, value in flat_data.items()
+            }
+            # Ensure normalized_data has a value for each key in normalized_keys
+            values = [normalized_data.get(key, None) for key in normalized_keys]
+            placeholders = ", ".join("?" * len(normalized_keys))
+            sql = f"INSERT INTO {table_name} ({', '.join(normalized_keys)}) VALUES ({placeholders})"
+            cur.execute(sql, values)
+
+        # Commit changes and close connection
+        conn.commit()
+        conn.close()
 
     @staticmethod
     def read_json_file(file_path, encoding="utf-8"):

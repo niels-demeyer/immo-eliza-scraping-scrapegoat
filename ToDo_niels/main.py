@@ -50,7 +50,7 @@ def combine_csv_files():
         os.remove(f)
 
 
-def main(urls, start, end):
+def main(urls, start, end, table_name):
     # Select a batch of URLs
     batch_urls = urls[start:end]
     url_chunks = split_into_chunks(batch_urls, CHUNK_SIZE)
@@ -58,8 +58,9 @@ def main(urls, start, end):
         url_groups = split_into_chunks(url_chunk, GROUP_SIZE)
         for j, url_group in enumerate(url_groups):
             results = process_url_group(url_group)
-            save_results_to_csv(f"result_{i}_{j}.csv", results)
-    combine_csv_files()
+            # Save results to SQLite database instead of CSV
+            FileUtils.write_dict_to_sqlite("my_database.sqlite", table_name, results)
+    # No need to combine CSV files as we're not creating them anymore
 
 
 if __name__ == "__main__":
@@ -67,6 +68,6 @@ if __name__ == "__main__":
     data = file_utils.read_json_file(URLS_FILE, encoding=ENCODING)
     urls = [item["href"] for item in data]
     # Process the first 500 URLs
-    # main(urls, start=0, end=500)
+    main(urls, start=0, end=500, table_name="first_500")
     # # Process the next 500 URLs
-    main(urls, start=500, end=1000)
+    # main(urls, start=500, end=1000, table_name="next_500")
