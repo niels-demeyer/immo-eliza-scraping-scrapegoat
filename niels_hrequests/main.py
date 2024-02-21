@@ -26,9 +26,9 @@ def main(urls):
         result = page.to_dict()
         dict_result.append(result)
 
-    print(dict_result[0])
-    # # # Save dict_result into a CSV file
-    # FileUtils.write_dict_to_csv("result.csv", dict_result)
+    # print(dict_result[0])
+    # # Save dict_result into a CSV file
+    FileUtils.write_dict_to_csv("result.csv", dict_result)
 
 
 if __name__ == "__main__":
