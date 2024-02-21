@@ -6,6 +6,46 @@ import csv
 
 class FileUtils:
     @staticmethod
+    def flatten_dict(d, parent_key="", sep="_"):
+        items = []
+        for k, v in d.items():
+            new_key = f"{parent_key}{sep}{k}" if parent_key else k
+            if isinstance(v, dict):
+                items.extend(FileUtils.flatten_dict(v, new_key, sep=sep).items())
+            elif isinstance(v, list):
+                for i, elem in enumerate(v):
+                    if isinstance(elem, dict):
+                        items.extend(
+                            FileUtils.flatten_dict(
+                                elem, f"{new_key}{sep}{i}", sep=sep
+                            ).items()
+                        )
+                    else:
+                        items.append((f"{new_key}{sep}{i}", elem))
+            else:
+                items.append((new_key, v))
+        return dict(items)
+
+    @staticmethod
+    def write_dict_to_csv(file_path, data):
+        # Check if data is a list
+        if isinstance(data, list):
+            # Flatten each dictionary in the list
+            flat_data_list = [FileUtils.flatten_dict(item) for item in data]
+        else:
+            # If data is not a list, assume it's a dictionary and flatten it
+            flat_data_list = [FileUtils.flatten_dict(data)]
+
+        # Get all keys used in any dictionary
+        all_keys = set().union(*(d.keys() for d in flat_data_list))
+
+        with open(file_path, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=all_keys)
+            writer.writeheader()
+            for flat_data in flat_data_list:
+                writer.writerow(flat_data)
+
+    @staticmethod
     def write_json_file(file_path, data):
         with open(file_path, "w") as f:
             json.dump(data, f, indent=4)
@@ -31,54 +71,6 @@ class FileUtils:
                 if item["href"] not in solo_items:
                     solo_items.append(item["href"])
         return solo_items
-
-    @staticmethod
-    def flatten_dict(d, parent_key="", sep="_"):
-        items = []
-        for k, v in d.items():
-            new_key = f"{parent_key}{sep}{k}" if parent_key else k
-            if isinstance(v, dict):
-                items.extend(FileUtils.flatten_dict(v, new_key, sep=sep).items())
-            elif isinstance(v, list):
-                for i, elem in enumerate(v):
-                    if isinstance(elem, dict):
-                        items.extend(
-                            FileUtils.flatten_dict(
-                                elem, f"{new_key}{sep}{i}", sep=sep
-                            ).items()
-                        )
-                    else:
-                        items.append((f"{new_key}{sep}{i}", elem))
-            else:
-                items.append((new_key, v))
-        return dict(items)
-
-    @staticmethod
-    def write_dict_to_csv(file_path, data):
-        # Access the 'raw' key in the dictionary
-        raw_data = data.get("raw", {})
-
-        if isinstance(raw_data, str):
-            # If raw_data is a string, try to parse it as a JSON string
-            try:
-                raw_data = json.loads(raw_data)
-            except json.JSONDecodeError:
-                # If parsing fails, print an error message and return
-                print(f"Error: 'raw' data is not a valid JSON string: {raw_data}")
-                return
-
-        # Flatten the dictionary
-        flat_data = FileUtils.flatten_dict(raw_data)
-
-        with open(file_path, "w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=flat_data.keys())
-            writer.writeheader()
-            writer.writerow(flat_data)
-
-        with open(file_path, "w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=flat_data.keys())
-            writer.writeheader()
-            writer.writerow(flat_data)
 
     @staticmethod
     def create_directory(directory):

@@ -14,7 +14,7 @@ data = FileUtils.read_json_file(r"data_scrapy\scrapy_output.json")
 
 
 # Split duplicates_checked into the first 100 results
-urls = [item["href"] for item in data[:100]]
+urls = [item["href"] for item in data[100:200]]
 
 # print(urls)
 
@@ -26,9 +26,9 @@ def main(urls):
         result = page.to_dict()
         dict_result.append(result)
 
-    print(dict_result[0])
-    # # # Save dict_result into a CSV file
-    # FileUtils.write_dict_to_csv("result.csv", dict_result)
+    # print(dict_result[0])
+    # # Save dict_result into a CSV file
+    FileUtils.write_dict_to_csv("result.csv", dict_result)
 
 
 if __name__ == "__main__":
