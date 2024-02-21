@@ -93,16 +93,20 @@ def combine_url(splitted_url: dict) -> str:
     return url
 
 
-number_of_test = 1
 
-for element in scrapy_output_href:
-    url = element
-    test_split = split_url(url)
-    test_combine = combine_url(test_split)
-    number_of_test += 1
+def get_immoweb_code(url: str) -> str:
+    split_url(url)
+    return split_url(url)['immoweb_code']
 
-    if test_combine != url:
-        print(f"Something gone wrong with element #{number_of_test}.")
-        print(test_split)
-        print(test_combine)
-        print(test_combine == url)
+
+
+def get_immoweb_code_dict(scrapy_output_href: list) -> dict:
+    immoweb_code_dict = {}
+    for url in scrapy_output_href:
+        immoweb_code_dict[url] = get_immoweb_code(url)
+        # Save the dictionary to a JSON file
+    with open('href_with_id.json', 'w') as f:
+        json.dump(immoweb_code_dict, f)
+    return immoweb_code_dict
+
+get_immoweb_code_dict(scrapy_output_100_href)
