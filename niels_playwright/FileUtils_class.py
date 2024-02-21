@@ -32,6 +32,13 @@ class FileUtils:
         return solo_items
 
     @staticmethod
+    def write_dict_to_csv(file_path, data):
+        with open(file_path, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=data.keys())
+            writer.writeheader()
+            writer.writerow(data)
+
+    @staticmethod
     def create_directory(directory):
         if not os.path.exists(directory):
             os.makedirs(directory)
