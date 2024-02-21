@@ -19,7 +19,7 @@ def remove_duplicates(data):
 
 
 # Read data from file
-data = read_json_file("./immoweb/output.json")
+data = read_json_file("./output.json")
 
 
 # Remove duplicates from data
