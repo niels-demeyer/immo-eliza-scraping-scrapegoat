@@ -6,15 +6,18 @@ import pandas as pd
 
 class ExtractPage:
     """
-        Extracts a json from the page's html where we have all the characteristics of a property.
-        Has a method to filter out which page has only one property or multiple listed inside.
-        Args:
-            url (str): url of a listing in the website.
+    Extracts a json from the page's html where we have all the characteristics of a property.
+    Has a method to filter out which page has only one property or multiple listed inside.
+    Args:
+        url (str): url of a listing in the website.
     """
-    def __init__(self, url: str) -> None: 
+
+    def __init__(self, url: str) -> None:
         # Sets up request
-        headers={'User-Agent':'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36'}
-        r = requests.get(url, headers = headers)
+        headers = {
+            "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
+        }
+        r = requests.get(url, headers=headers)
         content = r.content
 
         # Parses html getting into a script tag, cleans it and dumps as a json

@@ -71,7 +71,7 @@ class ImmoWebScraper:
             text = elements[0].text.strip()
             self.data['bedrooms'] = self.extract_numeric(text)
         else:
-            self.data['bedrooms'] = '0'
+            return None
 
     def extract_bathrooms(self):
         elements = self.soup.select(
@@ -81,7 +81,7 @@ class ImmoWebScraper:
             text = elements[0].text.strip()
             self.data['bathrooms'] = self.extract_numeric(text)
         else:
-            self.data['bathrooms'] = '0'
+            return None
 
     def extract_living_area(self):
         elements = self.soup.select(
@@ -90,7 +90,7 @@ class ImmoWebScraper:
             text = elements[0].text.strip()
             self.data['living_area'] = self.extract_numeric(text)
         else:
-            self.data['living_area'] = '0'
+            return None
 
     def extract_floor(self):
         elements = self.soup.select(
@@ -99,7 +99,7 @@ class ImmoWebScraper:
             text = elements[0].text.strip()
             self.data['floor'] = self.extract_numeric(text)
         else:
-            self.data['floor'] = '-'
+            return None
 
     def extract_energy_consumption(self):
         pass
@@ -133,7 +133,7 @@ class ImmoWebScraper:
 
 
 scraper = ImmoWebScraper(
-    'https://www.immoweb.be/en/classified/apartment/for-sale/fayt-lez-manage/7170/10682127')
+    'https://www.immoweb.be/en/classified/house/for-sale/steenokkerzeel/1820/11151131')
 result = scraper.run()
 print(result)
 

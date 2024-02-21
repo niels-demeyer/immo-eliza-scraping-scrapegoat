@@ -1,6 +1,7 @@
 import os
 import shutil
 import json
+import csv
 
 
 class FileUtils:
@@ -30,6 +31,13 @@ class FileUtils:
                 if item["href"] not in solo_items:
                     solo_items.append(item["href"])
         return solo_items
+
+    @staticmethod
+    def write_dict_to_csv(file_path, data):
+        with open(file_path, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=data.keys())
+            writer.writeheader()
+            writer.writerow(data)
 
     @staticmethod
     def create_directory(directory):
