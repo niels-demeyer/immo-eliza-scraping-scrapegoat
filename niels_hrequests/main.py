@@ -27,7 +27,7 @@ duplicates_checked = FileUtils.return_solo_items(data=data)
 print(len(duplicates_checked))
 
 # Split duplicates_checked into the first 100 results
-urls = duplicates_checked[:100]
+urls = duplicates_checked[:10]
 
 
 def main(urls):
@@ -35,10 +35,10 @@ def main(urls):
     for url in urls:
         page = ExtractPage(url=url)
         result = page.to_dict()
-        dict_result[url] = result
+        # print(result)
 
-    # Save dict_result into a CSV file
-    FileUtils.write_dict_to_csv("result.csv", dict_result)
+    # # Save dict_result into a CSV file
+    FileUtils.write_dict_to_csv("result.csv", result)
 
 
 if __name__ == "__main__":

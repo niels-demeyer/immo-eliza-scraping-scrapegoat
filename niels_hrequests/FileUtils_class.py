@@ -33,11 +33,52 @@ class FileUtils:
         return solo_items
 
     @staticmethod
+    def flatten_dict(d, parent_key="", sep="_"):
+        items = []
+        for k, v in d.items():
+            new_key = f"{parent_key}{sep}{k}" if parent_key else k
+            if isinstance(v, dict):
+                items.extend(FileUtils.flatten_dict(v, new_key, sep=sep).items())
+            elif isinstance(v, list):
+                for i, elem in enumerate(v):
+                    if isinstance(elem, dict):
+                        items.extend(
+                            FileUtils.flatten_dict(
+                                elem, f"{new_key}{sep}{i}", sep=sep
+                            ).items()
+                        )
+                    else:
+                        items.append((f"{new_key}{sep}{i}", elem))
+            else:
+                items.append((new_key, v))
+        return dict(items)
+
+    @staticmethod
     def write_dict_to_csv(file_path, data):
+        # Access the 'raw' key in the dictionary
+        raw_data = data.get("raw", {})
+
+        if isinstance(raw_data, str):
+            # If raw_data is a string, try to parse it as a JSON string
+            try:
+                raw_data = json.loads(raw_data)
+            except json.JSONDecodeError:
+                # If parsing fails, print an error message and return
+                print(f"Error: 'raw' data is not a valid JSON string: {raw_data}")
+                return
+
+        # Flatten the dictionary
+        flat_data = FileUtils.flatten_dict(raw_data)
+
         with open(file_path, "w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=data.keys())
+            writer = csv.DictWriter(f, fieldnames=flat_data.keys())
             writer.writeheader()
-            writer.writerow(data)
+            writer.writerow(flat_data)
+
+        with open(file_path, "w", newline="") as f:
+            writer = csv.DictWriter(f, fieldnames=flat_data.keys())
+            writer.writeheader()
+            writer.writerow(flat_data)
 
     @staticmethod
     def create_directory(directory):
