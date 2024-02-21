@@ -98,9 +98,9 @@ def merge_values_to_href(data):
         url += f"/{property_type}"
 
     # Add the type part (for-sale...)
-    type_part = "for-sale" if data.get(
-        'type') == "for sale" else "for-rent"
-    url += f"/{type_part}"
+    if data.get('type'):
+        type = data.get("type")
+        url += f"/{type}"
 
     # Add the town name and postal code
     if data.get('town_name') and data.get('postal_code'):
