@@ -2,7 +2,7 @@ import pandas as pd
 from pprint import pprint
 
 # Load the CSV file as a pandas DataFrame with 'latin1' encoding
-df = pd.read_csv("result.csv", encoding="latin1")
+df = pd.read_csv("result.csv", encoding="ISO-8859-1")
 
 # Now df is a DataFrame, and you can use pandas methods on it.
 # Set the options
