@@ -1,6 +1,7 @@
+import hrequests
 from bs4 import BeautifulSoup
 import json
-import requests
+from selectolax.parser import HTMLParser
 
 
 class ExtractPage:
@@ -12,31 +13,55 @@ class ExtractPage:
     """
 
     def __init__(self, url: str) -> None:
-        # Sets up request
-        headers = {
+        self.url = url
+        self.headers = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
         }
-        r = requests.get(url, headers=headers)
-        content = r.content
-
-        # Parses html getting into a script tag, cleans it and dumps as a json
-        soup = BeautifulSoup(content, "html.parser")
-        raw_data = (
-            soup.find("script", attrs={"type": "text/javascript"})
-            .text.replace("window.classified = ", "")
-            .replace(";", "")
-            .strip()
-        )
-        self.raw = json.loads(raw_data)
-        # Tracks if page is a single property or a list of properties
+        self.raw = self.get_raw_data()
         self.single = self.is_single_listing()
+
+    def get_raw_data(self):
+        response = self.make_request()
+        if response is not None:
+            content = response.content
+            html = HTMLParser(content)
+            raw_data = self.extract_data_from_script(html)
+            return json.loads(raw_data)
+        else:
+            return None
+
+    def make_request(self):
+        try:
+            return hrequests.get(self.url, headers=self.headers)
+        except hrequests.exceptions.RequestException as e:
+            print(f"An error occurred while making a request to {self.url}: {e}")
+            return None
+
+    def extract_data_from_script(self, html):
+        script = html.css_first("script[type='text/javascript']")
+        if script:
+            return (
+                script.text()
+                .replace("window.classified = ", "")
+                .replace(";", "")
+                .strip()
+            )
+        else:
+            print("No script tag found in the HTML.")
+            return None
 
     def is_single_listing(self) -> bool:
         # Uses key "cluster" to filter if multiple or single
-        if self.raw["cluster"] == "null" or self.raw["cluster"] == None:
-            return True
-        else:
-            return False
+        return self.raw and (
+            self.raw["cluster"] == "null" or self.raw["cluster"] is None
+        )
+
+    def to_dict(self):
+        return {
+            "url": self.url,
+            "raw": self.raw,
+            "single": self.single,
+        }
 
 
 class Single:
