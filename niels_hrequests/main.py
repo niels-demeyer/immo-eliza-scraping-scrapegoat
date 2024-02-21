@@ -37,7 +37,8 @@ def main(urls):
         result = page.to_dict()
         dict_result[url] = result
 
-    pprint(dict_result)
+    # Save dict_result into a CSV file
+    FileUtils.write_dict_to_csv("result.csv", dict_result)
 
 
 if __name__ == "__main__":
