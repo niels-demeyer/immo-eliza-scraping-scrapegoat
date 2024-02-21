@@ -51,8 +51,8 @@ class FileUtils:
             json.dump(data, f, indent=4)
 
     @staticmethod
-    def read_json_file(file_path):
-        with open(file_path, "r") as f:
+    def read_json_file(file_path, encoding="utf-8"):
+        with open(file_path, "r", encoding=encoding) as f:
             return json.load(f)
 
     def check_duplicates_json_file(file_path, data):
