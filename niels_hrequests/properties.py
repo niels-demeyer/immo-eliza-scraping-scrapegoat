@@ -17,8 +17,13 @@ class ExtractPage:
         self.headers = {
             "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36"
         }
-        self.raw = self.get_raw_data()
-        self.single = self.is_single_listing()
+        try:
+            self.raw = self.get_raw_data()
+            self.single = self.is_single_listing()
+        except ValueError:
+            print(f"Error: No script tag found in the HTML for URL {self.url}")
+            self.raw = None
+            self.single = None
 
     def get_raw_data(self):
         response = self.make_request()
@@ -26,14 +31,17 @@ class ExtractPage:
             content = response.content
             html = HTMLParser(content)
             raw_data = self.extract_data_from_script(html)
-            return json.loads(raw_data)
+            if raw_data is not None:
+                return json.loads(raw_data)
+            else:
+                raise ValueError("No script tag found in the HTML.")
         else:
             return None
 
     def make_request(self):
         try:
             return hrequests.get(self.url, headers=self.headers)
-        except hrequests.exceptions.RequestException as e:
+        except hrequests.exceptions.ClientException as e:
             print(f"An error occurred while making a request to {self.url}: {e}")
             return None
 

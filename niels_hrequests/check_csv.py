@@ -17,3 +17,5 @@ print(df.columns[0:100])
 print(df.columns[100:200])
 print(df.columns[200:300])
 print(df.columns[300:-1])
+
+print(len(df))
