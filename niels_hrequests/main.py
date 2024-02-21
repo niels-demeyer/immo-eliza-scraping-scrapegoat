@@ -14,7 +14,7 @@ data = FileUtils.read_json_file(r"data_scrapy\scrapy_output.json")
 
 
 # Split duplicates_checked into the first 100 results
-urls = [item["href"] for item in data[:100]]
+urls = [item["href"] for item in data[100:200]]
 
 # print(urls)
 

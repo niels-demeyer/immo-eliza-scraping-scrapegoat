@@ -11,11 +11,9 @@ pd.set_option("display.max_columns", None)
 pd.set_option("display.width", None)
 pd.set_option("display.max_colwidth", None)
 
-# Now when you display a DataFrame, it will show all rows and columns
-print(df.columns)
-print(df.columns[0:100])
-print(df.columns[100:200])
-print(df.columns[200:300])
-print(df.columns[300:-1])
+chunk_size = 100
+for i in range(0, len(df.columns), chunk_size):
+    print(df.columns[i : i + chunk_size])
 
+print(len(df.columns))
 print(len(df))
