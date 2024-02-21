@@ -68,6 +68,6 @@ if __name__ == "__main__":
     data = file_utils.read_json_file(URLS_FILE, encoding=ENCODING)
     urls = [item["href"] for item in data]
     # Process the first 500 URLs
-    main(urls, start=0, end=500, table_name="first_500")
+    # main(urls, start=0, end=500, table_name="first_500")
     # # Process the next 500 URLs
-    # main(urls, start=500, end=1000, table_name="next_500")
+    main(urls, start=500, end=1000, table_name="second_500")
