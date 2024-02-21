@@ -1,24 +1,26 @@
 import json
 
+
 def read_json_file(filename):
-    with open(filename, 'r') as f:
+    with open(filename, "r") as f:
         data = json.load(f)
     return data
 
+
 def check_duplicates(data):
-    seen = {}
+    seen = set()
     duplicates = []
     for item in data:
-        # Assuming each item is a dict and 'href' is the unique identifier
-        href = item['href']
+        href = item["href"]
         if href in seen:
             duplicates.append(item)
         else:
-            seen[href] = item
+            seen.add(href)
     return duplicates
 
+
 # Read data from file
-data = read_json_file('./immoweb/output.json')
+data = read_json_file("./immoweb/output.json")
 
 # Check for duplicates
 duplicates = check_duplicates(data)
