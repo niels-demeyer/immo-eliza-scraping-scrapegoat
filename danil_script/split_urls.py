@@ -12,8 +12,10 @@ def read_json_file(file_path):
 file_path = "./scrapy_output.json"
 scrapy_output = read_json_file(file_path=file_path)
 
+print(scrapy_output)
+
 # Takes the first 100 items
-scrapy_output_100 =
+# scrapy_output_100 =
 
 # Returns the first 100 href (use the scrapy_output_100 variable)
 scrapy_output_100_href = []
