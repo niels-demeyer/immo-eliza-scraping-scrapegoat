@@ -35,21 +35,6 @@ def split_into_chunks(lst, chunk_size):
     return [lst[i : i + chunk_size] for i in range(0, len(lst), chunk_size)]
 
 
-def save_results_to_csv(filename, results):
-    """Saves a list of dictionaries to a CSV file."""
-    file_utils.write_dict_to_csv(filename, results)
-
-
-def combine_csv_files():
-    """Combines all CSV files into one and deletes the individual files."""
-    all_files = glob.glob("result_*.csv")
-    df_from_each_file = (pd.read_csv(f, encoding=ENCODING) for f in all_files)
-    combined_df = pd.concat(df_from_each_file, ignore_index=True)
-    combined_df.to_csv(OUTPUT_FILE, index=False)
-    for f in all_files:
-        os.remove(f)
-
-
 def main(urls, start, end, table_name):
     # Select a batch of URLs
     batch_urls = urls[start:end]
@@ -60,7 +45,6 @@ def main(urls, start, end, table_name):
             results = process_url_group(url_group)
             # Save results to SQLite database instead of CSV
             FileUtils.write_dict_to_sqlite("my_database.sqlite", table_name, results)
-    # No need to combine CSV files as we're not creating them anymore
 
 
 if __name__ == "__main__":
@@ -68,6 +52,5 @@ if __name__ == "__main__":
     data = file_utils.read_json_file(URLS_FILE, encoding=ENCODING)
     urls = [item["href"] for item in data]
     # Process the first 500 URLs
-    main(urls, start=500, end=1000, table_name="second_500")
+    main(urls, start=0, end=-1, table_name="niels_data")
     # # Process the next 500 URLs
-    # main(urls, start=500, end=1000, table_name="second_500")

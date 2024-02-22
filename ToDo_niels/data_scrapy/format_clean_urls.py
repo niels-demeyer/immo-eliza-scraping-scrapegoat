@@ -1,5 +1,6 @@
 import os
 import json
+import math
 
 
 def read_json_file(file_path, encoding="ISO-8859-1"):
@@ -19,9 +20,16 @@ def unpack_data(data):
 
 
 def save_json_file(file_path, data):
-    with open(file_path, "w") as f:
-        json.dump(data, f, indent=4)
+    # Calculate the size of each chunk
+    chunk_size = math.ceil(len(data) / 4)
 
+    # Split the data into four equal parts
+    chunks = [data[i:i + chunk_size] for i in range(0, len(data), chunk_size)]
+
+    # Save each chunk into a separate file
+    for i, chunk in enumerate(chunks):
+        with open(f"{file_path}_{i+1}.json", "w") as f:
+            json.dump(chunk, f, indent=4)
 
 data = format_clean_urls()
 
