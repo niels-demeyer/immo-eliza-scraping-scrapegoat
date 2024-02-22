@@ -10,7 +10,7 @@ CHUNK_SIZE = 100
 GROUP_SIZE = 10
 ENCODING = "ISO-8859-1"
 DATA_DIR = "data_scrapy"
-URLS_FILE = f"{DATA_DIR}/format_clean_urls.json"
+URLS_FILE = f"{DATA_DIR}/format_clean_urls3.json"
 OUTPUT_FILE = "output_requests.csv"
 
 # Create an instance of the FileUtils class
@@ -68,6 +68,6 @@ if __name__ == "__main__":
     data = file_utils.read_json_file(URLS_FILE, encoding=ENCODING)
     urls = [item["href"] for item in data]
     # Process the first 500 URLs
-    # main(urls, start=0, end=500, table_name="first_500")
-    # # Process the next 500 URLs
     main(urls, start=500, end=1000, table_name="second_500")
+    # # Process the next 500 URLs
+    # main(urls, start=500, end=1000, table_name="second_500")
