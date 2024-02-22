@@ -39,11 +39,13 @@ class ExtractPage:
             return None
 
     def make_request(self):
-        try:
-            return hrequests.get(self.url, headers=self.headers)
-        except hrequests.exceptions.ClientException as e:
-            print(f"An error occurred while making a request to {self.url}: {e}")
-            return None
+        while True:
+            try:
+                return hrequests.get(self.url, headers=self.headers)
+            except hrequests.exceptions.ClientException as e:
+                print(f"An error occurred while making a request to {self.url}: {e}")
+                pass
+
 
     def extract_data_from_script(self, html):
         script = html.css_first("script[type='text/javascript']")
