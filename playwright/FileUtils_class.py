@@ -6,6 +6,14 @@ import csv
 
 class FileUtils:
     @staticmethod
+    def write_dict_to_csv(file_path, data):
+        with open(file_path, "a", newline="", encoding="utf-8") as f:
+            writer = csv.DictWriter(f, fieldnames=data[0].keys())
+            writer.writeheader()
+            for row in data:
+                writer.writerow(row)
+
+    @staticmethod
     def write_json_file(file_path, data):
         with open(file_path, "w") as f:
             json.dump(data, f, indent=4)
@@ -31,13 +39,6 @@ class FileUtils:
                 if item["href"] not in solo_items:
                     solo_items.append(item["href"])
         return solo_items
-
-    @staticmethod
-    def write_dict_to_csv(file_path, data):
-        with open(file_path, "w", newline="") as f:
-            writer = csv.DictWriter(f, fieldnames=data.keys())
-            writer.writeheader()
-            writer.writerow(data)
 
     @staticmethod
     def create_directory(directory):
