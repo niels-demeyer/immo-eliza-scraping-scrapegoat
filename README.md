@@ -6,9 +6,9 @@ This project aims to create a dataset of real estate listings in Belgium. The da
 
 ## Table of Contents
 
-- [Installation ⚙️](#installation-⚙️) 
-- [Usage 🚀](#usage-🚀) 
-- [Sources 📚](#sources-📚) 
+- [Installation ⚙️](#installation-⚙️)
+- [Usage 🚀](#usage-🚀)
+- [Sources 📚](#sources-📚)
 - [Visuals 📷](#visuals-📷)
 - [Contributors 👥](#contributors-👥)
 - [Timeline 📅](#timeline-📅)
@@ -24,7 +24,7 @@ Ensure you have Git and Python installed on your system. Some commands in the ma
     git clone git@github.com:niels-demeyer/immo-eliza-scraping-scrapegoat.git
 
 **Navigate to the root of the repository using `cd` command**:
-  
+
     cd immo-eliza-scraping-scrapegoat
 
 **Install the required packages using `pip` command:**
@@ -44,8 +44,7 @@ It can take some time.
 
     cd ../../..
 
-
-**Navigate to the hrequests folder****
+**Navigate to the hrequests folder\*\***
 
     cd hrequests
 
@@ -63,7 +62,17 @@ by default it saves the result to the my_database.sqlite file in the first_500 t
 
 It will start scraping the data from the urls and save it to the database. It can take some time, so be patient.
 
- Your data will be saved in the `my_database.sqlite` file.
+Your data will be saved in the `my_database.sqlite` file.
+
+## Playwright 🎭
+
+This project provides a data scraping solution using Playwright.
+
+Once you've installed the necessary packages, you can initiate the scraping process by running the [main.py](playwright/main.py) script. Use the following command to do so:
+
+        python3 main.py
+
+Upon execution, the script launches 10 separate browser instances. Each instance is responsible for scraping data from 10 different links. The scraped data is then stored in a CSV file for further use. Please note that due to the volume of data being processed, the scraping operation might take a while to complete. Your patience is appreciated.
 
 ## Sources 📚
 
