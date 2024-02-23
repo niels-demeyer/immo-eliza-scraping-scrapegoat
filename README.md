@@ -6,12 +6,12 @@ This project aims to create a dataset of real estate listings in Belgium. The da
 
 ## Table of Contents
 
-- [Installation](#installation) ⚙️
-- [Usage](#usage) 🚀
-- [Sources](#sources) 📚
-- [Visuals](#visuals) 📷
-- [Contributors](#contributors) 👥
-- [Timeline](#timeline) 📅
+- [Installation ⚙️](#installation-⚙️) 
+- [Usage 🚀](#usage-🚀) 
+- [Sources 📚](#sources-📚) 
+- [Visuals 📷](#visuals-📷)
+- [Contributors 👥](#contributors-👥)
+- [Timeline 📅](#timeline-📅)
 
 ## Installation ⚙️
 
