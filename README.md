@@ -1,7 +1,8 @@
 # Belgium Real Estate Dataset 🏡
 
 ## Description 📝
-A brief description of what the project does.
+
+This project aims to create a dataset of real estate listings in Belgium. The dataset will be used to analyze the real estate market in Belgium, including property prices, location, and other relevant information.
 
 ## Table of Contents
 
@@ -16,28 +17,28 @@ A brief description of what the project does.
 
 Clone the repository using **git** command:
 
-      git clone git@github.com:niels-demeyer/immo-eliza-scraping-scrapegoat.git
+    git clone git@github.com:niels-demeyer/immo-eliza-scraping-scrapegoat.git
 
 Navigate to the root of the repository using **cd** command:
-      
-      cd immo-eliza-scraping-scrapegoat
+  
+    cd immo-eliza-scraping-scrapegoat
 
 Install the required packages using **pip** command:
 
-      pip install -r requirements.txt
+    pip install -r requirements.txt
 
 ## Usage 🚀
 
 **Update urls to get the newest information:**
 
-      cd scrapy/immoweb/immoweb
-      scrapy crawl most_expensive -o output.json
+    cd scrapy/immoweb/immoweb
+    scrapy crawl most_expensive -o output.json
 
 **Navigate back to the root of repository:**
 
-      cd ..
-      cd ..
-      cd ..
+    cd ..
+    cd ..
+    cd ..
 
 **Navigate to the hrequests folder****
 
@@ -53,7 +54,7 @@ by default it saves the result to the my_database.sqlite file in the first_500 t
 
 **After changing the values, run the main.py file using the following command:**
 
-      python main.py
+    python main.py
 
 It will start scraping the data from the urls and save it to the database. It can take some time, so be patient.
 
@@ -67,6 +68,8 @@ Data for this project was sourced from:
 
 ## Visuals 📷
 
+
+
 ## Contributors 👥
 
 - [Niels Demeyer](https://github.com/niels-demeyer)
@@ -78,7 +81,7 @@ Data for this project was sourced from:
 
 This project was completed over the course of 5 days. Below is a brief overview of the team's progress:
 
-- **Day 1:** Project planning and setup. Defined the project's scope and objectives.
+- **Day 1:** Project planning and setup. Defined the project's scope and objectives. Made first steps in the project.
 - **Day 2:** Started development. Worked on the initial features and functionalities.
 - **Day 3:** Continued development. Implemented additional features and started initial testing.
 - **Day 4:** Finalized development. Completed all planned features and conducted comprehensive testing.
