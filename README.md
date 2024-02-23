@@ -28,30 +28,36 @@ Install the required packages using **pip** command:
 
 ## Usage 🚀
 
-Update urls to get the newest information:
+**Update urls to get the newest information:**
 
       cd scrapy/immoweb/immoweb
       scrapy crawl most_expensive -o output.json
 
-Navigate back to the root of repository:
+**Navigate back to the root of repository:**
 
       cd ..
       cd ..
       cd ..
 
-Navigate to the hrequests folder
+**Navigate to the hrequests folder****
 
     cd hrequests
 
-Open the [main.py](hrequests/main.py) using code editor and change these values:
+**Open the [main.py](hrequests/main.py) using code editor and change these values:**
 
 ![My Image](img/how_to_setup_hrequests.png)
 
-Run the [main.py](hrequests/main.py) file:
+by default it scrapes 500 url, you can change it by changing the value of the `end` variable.
+
+by default it saves the result to the my_database.sqlite file in the first_500 table, you can change it by changing the value of the `table_name` variable.
+
+**After changing the values, run the main.py file using the following command:**
 
       python main.py
 
-Your data will be saved in the my_database.sqlite file.
+It will start scraping the data from the urls and save it to the database. It can take some time, so be patient.
+
+ Your data will be saved in the `my_database.sqlite` file.
 
 ## Sources 📚
 
