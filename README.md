@@ -68,8 +68,9 @@ Your data will be saved in the `my_database.sqlite` file.
 
 This project provides a data scraping solution using Playwright.
 
-Once you've installed the necessary packages, you can initiate the scraping process by running the [main.py](playwright/main.py) script. Use the following command to do so:
+Once you've installed the necessary packages, you can initiate the scraping process by navigating to the `playwright` directory and running the [main.py](playwright/main.py) script. Use the following commands to do so:
 
+        cd playwright
         python3 main.py
 
 Upon execution, the script launches 10 separate browser instances. Each instance is responsible for scraping data from 10 different links. The scraped data is then stored in a CSV file for further use. Please note that due to the volume of data being processed, the scraping operation might take a while to complete. Your patience is appreciated.
