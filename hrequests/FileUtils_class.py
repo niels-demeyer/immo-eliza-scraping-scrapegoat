@@ -28,28 +28,6 @@ class FileUtils:
         return dict(items)
 
     @staticmethod
-    def write_dict_to_csv(file_path, data):
-        # Check if data is a list
-        if isinstance(data, list):
-            # Flatten each dictionary in the list
-            flat_data_list = [FileUtils.flatten_dict(item) for item in data]
-        else:
-            # If data is not a list, assume it's a dictionary and flatten it
-            flat_data_list = [FileUtils.flatten_dict(data)]
-
-        # Get all keys used in any dictionary
-        all_keys = set().union(*(d.keys() for d in flat_data_list))
-
-        try:
-            with open(file_path, "w", newline="", encoding="utf-8") as f:
-                writer = csv.DictWriter(f, fieldnames=all_keys)
-                writer.writeheader()
-                for flat_data in flat_data_list:
-                    writer.writerow(flat_data)
-        except UnicodeEncodeError as e:
-            print(f"UnicodeEncodeError: {e}")
-
-    @staticmethod
     def write_dict_to_sqlite(db_path, table_name, data):
         # Create a connection to the SQLite database
         conn = sqlite3.connect(db_path)
