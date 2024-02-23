@@ -2,6 +2,7 @@ import hrequests
 from bs4 import BeautifulSoup
 import json
 from selectolax.parser import HTMLParser
+import concurrent.futures
 
 
 class ExtractPage:
@@ -71,3 +72,15 @@ class ExtractPage:
             "raw": self.raw,
             "single": self.single,
         }
+
+    @staticmethod
+    def process_url_group(url_group):
+        """Processes a group of URLs in parallel and returns a list of results."""
+        with concurrent.futures.ThreadPoolExecutor() as executor:
+            results = list(executor.map(ExtractPage, url_group))
+        return results
+
+    @staticmethod
+    def split_into_chunks(lst, chunk_size):
+        """Splits a list into chunks of a specific size."""
+        return [lst[i : i + chunk_size] for i in range(0, len(lst), chunk_size)]
