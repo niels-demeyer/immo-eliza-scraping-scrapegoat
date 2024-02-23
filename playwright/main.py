@@ -36,5 +36,7 @@ def scrape_urls(urls):
 with concurrent.futures.ThreadPoolExecutor() as executor:
     results = executor.map(scrape_urls, urls)
 
+# After the results are obtained
 for result in results:
     pprint(result)
+    FileUtils.write_dict_to_csv("results.csv", result)
