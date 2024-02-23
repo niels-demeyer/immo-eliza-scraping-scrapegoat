@@ -11,32 +11,47 @@ A brief description of what the project does.
 - [Visuals](#visuals) 📷
 - [Contributors](#contributors) 👥
 - [Timeline](#timeline) 📅
-- [License](#license) 📄
 
 ## Installation ⚙️
 
-Clone the repository using **git clone**:
+Clone the repository using **git** command:
 
       git clone git@github.com:niels-demeyer/immo-eliza-scraping-scrapegoat.git
 
-Navigate to a cloned repository using **cd** command:
+Navigate to the root of the repository using **cd** command:
       
       cd immo-eliza-scraping-scrapegoat
 
-Install requirements:
+Install the required packages using **pip** command:
 
       pip install -r requirements.txt
 
-
-Update urls:
-
-      cd immo-eliza-scraping-scrapegoat/scrapy/immoweb/immoweb
-      scrapy crawl most_expensive -o output.json
-
-
 ## Usage 🚀
 
-Examples and instructions on how to use the project.
+Update urls to get the newest information:
+
+      cd scrapy/immoweb/immoweb
+      scrapy crawl most_expensive -o output.json
+
+Navigate back to the root of repository:
+
+      cd ..
+      cd ..
+      cd ..
+
+Navigate to the hrequests folder
+
+    cd hrequests
+
+Open the [main.py](hrequests/main.py) using code editor and change these values:
+
+![My Image](img/how_to_setup_hrequests.png)
+
+Run the [main.py](hrequests/main.py) file:
+
+      python main.py
+
+Your data will be saved in the my_database.sqlite file.
 
 ## Sources 📚
 
