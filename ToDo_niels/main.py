@@ -1,7 +1,6 @@
 from properties import ExtractPage
 from FileUtils_class import FileUtils
 import os
-import concurrent.futures
 import pandas as pd
 import glob
 
@@ -17,32 +16,15 @@ OUTPUT_FILE = "output_requests.csv"
 file_utils = FileUtils()
 
 
-def process_url(url):
-    """Extracts data from a URL and returns it as a dictionary."""
-    page = ExtractPage(url=url)
-    return page.to_dict()
-
-
-def process_url_group(url_group):
-    """Processes a group of URLs in parallel and returns a list of results."""
-    with concurrent.futures.ThreadPoolExecutor() as executor:
-        results = list(executor.map(process_url, url_group))
-    return results
-
-
-def split_into_chunks(lst, chunk_size):
-    """Splits a list into chunks of a specific size."""
-    return [lst[i : i + chunk_size] for i in range(0, len(lst), chunk_size)]
-
-
 def main(urls, start, end, table_name):
     # Select a batch of URLs
     batch_urls = urls[start:end]
-    url_chunks = split_into_chunks(batch_urls, CHUNK_SIZE)
+    url_chunks = ExtractPage.split_into_chunks(batch_urls, CHUNK_SIZE)
     for i, url_chunk in enumerate(url_chunks):
-        url_groups = split_into_chunks(url_chunk, GROUP_SIZE)
+        url_groups = ExtractPage.split_into_chunks(url_chunk, GROUP_SIZE)
         for j, url_group in enumerate(url_groups):
-            results = process_url_group(url_group)
+            extract_page_objects = ExtractPage.process_url_group(url_group)
+            results = [obj.to_dict() for obj in extract_page_objects]
             # Save results to SQLite database instead of CSV
             FileUtils.write_dict_to_sqlite("my_database.sqlite", table_name, results)
 
